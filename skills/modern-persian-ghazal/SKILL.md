@@ -17,6 +17,25 @@ user-invocable: true
 disable-model-invocation: false
 version: 2.0.0
 ---
+## Recommended Model
+
+This skill is specifically designed and optimized for **Claude Fable 5**.
+
+For the strongest and most reliable results—particularly in strict Persian
+prosody, phonetic rhyme validation, multi-pass metrical revision, literary
+judgment, and long-form constraint adherence—use this skill with Claude Fable 5.
+
+The skill remains compatible with other capable Claude models; however, smaller
+or speed-optimized models may be less consistent when validating quantitative
+meter across every hemistich or when simultaneously preserving meter, rhyme,
+meaning, natural syntax, and literary quality.
+
+For production-grade ghazal generation, use:
+
+```text
+Recommended model: Claude Fable 5
+Recommended reasoning effort: Highest available
+Recommended mode: Extended or deep reasoning
 
 # Modern Persian Ghazal — Strict Prosody
 
