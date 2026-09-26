@@ -1,0 +1,4 @@
+interface:
+  display_name: "غزل فارسی"
+  short_description: "سرایش، نقد و اصلاح حرفه‌ای غزل موزون فارسی"
+  default_prompt: "با $modern-persian-ghazal یک غزل فارسی حرفه‌ای، موزون و خوش‌قافیه مطابق خواسته‌ام بنویس."
