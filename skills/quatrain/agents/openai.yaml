@@ -1,0 +1,4 @@
+interface:
+  display_name: "quatrain (رباعی)"
+  short_description: "سرایش رباعی امروزین با کنترل دقیق وزن و قافیه"
+  default_prompt: "با $quatrain یک رباعی با زبان فارسی امروز و وزن دقیق بنویس."

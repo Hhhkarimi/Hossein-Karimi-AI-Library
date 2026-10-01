@@ -1,0 +1,431 @@
+{
+  "source_url": "https://ganjoor.net/khayyam/mirafzali/mohtamal/sh45",
+  "purpose": "Historical scansion fixture; not a contemporary composition or proof of attribution. Second pass is a recorded agreed reading, not a separate validator.",
+  "lines": [
+    {
+      "text": "تا کی غم آن خورم که دارم یا نه",
+      "meter": "R04",
+      "syllables": [
+        {
+          "sound": "tā",
+          "quantity": "-"
+        },
+        {
+          "sound": "key",
+          "quantity": "-"
+        },
+        {
+          "sound": "gha",
+          "quantity": "u"
+        },
+        {
+          "sound": "me",
+          "quantity": "u"
+        },
+        {
+          "sound": "ān",
+          "quantity": "-"
+        },
+        {
+          "sound": "kho",
+          "quantity": "u"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "ke",
+          "quantity": "u"
+        },
+        {
+          "sound": "dā",
+          "quantity": "-"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "yā",
+          "quantity": "-"
+        },
+        {
+          "sound": "na",
+          "quantity": "u"
+        }
+      ],
+      "second_pass": [
+        {
+          "sound": "tā",
+          "quantity": "-"
+        },
+        {
+          "sound": "key",
+          "quantity": "-"
+        },
+        {
+          "sound": "gha",
+          "quantity": "u"
+        },
+        {
+          "sound": "me",
+          "quantity": "u"
+        },
+        {
+          "sound": "ān",
+          "quantity": "-"
+        },
+        {
+          "sound": "kho",
+          "quantity": "u"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "ke",
+          "quantity": "u"
+        },
+        {
+          "sound": "dā",
+          "quantity": "-"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "yā",
+          "quantity": "-"
+        },
+        {
+          "sound": "na",
+          "quantity": "u"
+        }
+      ],
+      "notes": [
+        "غمِ آن با اضافه؛ آن یک هجای بلند؛ نه کوتاه طبیعی با جایگاه بلند پایانی"
+      ],
+      "unresolved": []
+    },
+    {
+      "text": "وین عمر به خوشدلی گذارم یا نه",
+      "meter": "R04",
+      "syllables": [
+        {
+          "sound": "vīn",
+          "quantity": "-"
+        },
+        {
+          "sound": "omr",
+          "quantity": "K"
+        },
+        {
+          "sound": "be",
+          "quantity": "u"
+        },
+        {
+          "sound": "khosh",
+          "quantity": "-"
+        },
+        {
+          "sound": "de",
+          "quantity": "u"
+        },
+        {
+          "sound": "lī",
+          "quantity": "-"
+        },
+        {
+          "sound": "go",
+          "quantity": "u"
+        },
+        {
+          "sound": "zā",
+          "quantity": "-"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "yā",
+          "quantity": "-"
+        },
+        {
+          "sound": "na",
+          "quantity": "u"
+        }
+      ],
+      "second_pass": [
+        {
+          "sound": "vīn",
+          "quantity": "-"
+        },
+        {
+          "sound": "omr",
+          "quantity": "K"
+        },
+        {
+          "sound": "be",
+          "quantity": "u"
+        },
+        {
+          "sound": "khosh",
+          "quantity": "-"
+        },
+        {
+          "sound": "de",
+          "quantity": "u"
+        },
+        {
+          "sound": "lī",
+          "quantity": "-"
+        },
+        {
+          "sound": "go",
+          "quantity": "u"
+        },
+        {
+          "sound": "zā",
+          "quantity": "-"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "yā",
+          "quantity": "-"
+        },
+        {
+          "sound": "na",
+          "quantity": "u"
+        }
+      ],
+      "notes": [
+        "وین بلند؛ عمر هجای کشیدهٔ میانی؛ نه با اختیار پایان"
+      ],
+      "unresolved": []
+    },
+    {
+      "text": "پر کن قدحی باده که معلومم نیست",
+      "meter": "R02",
+      "syllables": [
+        {
+          "sound": "por",
+          "quantity": "-"
+        },
+        {
+          "sound": "kon",
+          "quantity": "-"
+        },
+        {
+          "sound": "qa",
+          "quantity": "u"
+        },
+        {
+          "sound": "da",
+          "quantity": "u"
+        },
+        {
+          "sound": "hī",
+          "quantity": "-"
+        },
+        {
+          "sound": "bā",
+          "quantity": "-"
+        },
+        {
+          "sound": "de",
+          "quantity": "u"
+        },
+        {
+          "sound": "ke",
+          "quantity": "u"
+        },
+        {
+          "sound": "maʔ",
+          "quantity": "-"
+        },
+        {
+          "sound": "lū",
+          "quantity": "-"
+        },
+        {
+          "sound": "mam",
+          "quantity": "-"
+        },
+        {
+          "sound": "nīst",
+          "quantity": "K"
+        }
+      ],
+      "second_pass": [
+        {
+          "sound": "por",
+          "quantity": "-"
+        },
+        {
+          "sound": "kon",
+          "quantity": "-"
+        },
+        {
+          "sound": "qa",
+          "quantity": "u"
+        },
+        {
+          "sound": "da",
+          "quantity": "u"
+        },
+        {
+          "sound": "hī",
+          "quantity": "-"
+        },
+        {
+          "sound": "bā",
+          "quantity": "-"
+        },
+        {
+          "sound": "de",
+          "quantity": "u"
+        },
+        {
+          "sound": "ke",
+          "quantity": "u"
+        },
+        {
+          "sound": "maʔ",
+          "quantity": "-"
+        },
+        {
+          "sound": "lū",
+          "quantity": "-"
+        },
+        {
+          "sound": "mam",
+          "quantity": "-"
+        },
+        {
+          "sound": "nīst",
+          "quantity": "K"
+        }
+      ],
+      "notes": [
+        "قدحی با یای بلند؛ معلومم با پیوستنِ پی‌بست: maʔ / lū / mam؛ نیست کشیدهٔ پایانی",
+        "این شاهد با خوانش ادبیِ عینِ ملفوظ در maʔ تقطیع شده است؛ خوانش ma / lū / mam همین رشته را ندارد. این تلفظ را به واژهٔ معلوم در شعر امروز تحمیل نکن."
+      ],
+      "unresolved": []
+    },
+    {
+      "text": "کین دم که فرو برم برآرم یا نه",
+      "meter": "R04",
+      "syllables": [
+        {
+          "sound": "kīn",
+          "quantity": "-"
+        },
+        {
+          "sound": "dam",
+          "quantity": "-"
+        },
+        {
+          "sound": "ke",
+          "quantity": "u"
+        },
+        {
+          "sound": "fo",
+          "quantity": "u"
+        },
+        {
+          "sound": "rū",
+          "quantity": "-"
+        },
+        {
+          "sound": "ba",
+          "quantity": "u"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "ba",
+          "quantity": "u"
+        },
+        {
+          "sound": "rā",
+          "quantity": "-"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "yā",
+          "quantity": "-"
+        },
+        {
+          "sound": "na",
+          "quantity": "u"
+        }
+      ],
+      "second_pass": [
+        {
+          "sound": "kīn",
+          "quantity": "-"
+        },
+        {
+          "sound": "dam",
+          "quantity": "-"
+        },
+        {
+          "sound": "ke",
+          "quantity": "u"
+        },
+        {
+          "sound": "fo",
+          "quantity": "u"
+        },
+        {
+          "sound": "rū",
+          "quantity": "-"
+        },
+        {
+          "sound": "ba",
+          "quantity": "u"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "ba",
+          "quantity": "u"
+        },
+        {
+          "sound": "rā",
+          "quantity": "-"
+        },
+        {
+          "sound": "ram",
+          "quantity": "-"
+        },
+        {
+          "sound": "yā",
+          "quantity": "-"
+        },
+        {
+          "sound": "na",
+          "quantity": "u"
+        }
+      ],
+      "notes": [
+        "کین بلند؛ برآرم با خوانشِ پیوستهٔ ba / rā / ram؛ نه با اختیار پایان"
+      ],
+      "unresolved": []
+    }
+  ]
+}
