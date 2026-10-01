@@ -1,0 +1,9 @@
+period,product,cost_center,cost_category,actual_cost,budget_cost,production_qty,unit,currency
+2026-08,Product-A,Production,Direct Material,420000,400000,10000,kg,IRR
+2026-08,Product-A,Production,Direct Labor,80000,75000,10000,kg,IRR
+2026-08,Product-A,Maintenance,Maintenance,50000,45000,10000,kg,IRR
+2026-08,Product-A,Utilities,Energy,60000,55000,10000,kg,IRR
+2025-08,Product-A,Production,Direct Material,350000,340000,9500,kg,IRR
+2025-08,Product-A,Production,Direct Labor,70000,68000,9500,kg,IRR
+2025-08,Product-A,Maintenance,Maintenance,45000,42000,9500,kg,IRR
+2025-08,Product-A,Utilities,Energy,50000,48000,9500,kg,IRR
