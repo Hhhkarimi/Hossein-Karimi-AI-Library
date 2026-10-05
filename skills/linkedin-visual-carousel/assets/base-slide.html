@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{DIR}}">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="carousel.css" />
+<title>{{TITLE}}</title>
+</head>
+<body>
+  <main class="slide {{KIND}}" style="--bg:{{BG}};--surface:{{SURFACE}};--primary:{{PRIMARY}};--accent:{{ACCENT}};--text:{{TEXT}};--muted:{{MUTED}};--border:{{BORDER}}">
+    <div class="shape shape-a"></div>
+    <div class="shape shape-b"></div>
+    {{PORTRAIT}}
+    <header>
+      <div class="eyebrow">{{EYEBROW}}</div>
+      <h1>{{TITLE}}</h1>
+      <p class="subtitle">{{SUBTITLE}}</p>
+    </header>
+    <section class="cards">{{CARDS}}</section>
+    <footer>
+      <div class="byline">{{BYLINE}}</div>
+      <div class="pager">{{PAGER}}</div>
+    </footer>
+  </main>
+</body>
+</html>

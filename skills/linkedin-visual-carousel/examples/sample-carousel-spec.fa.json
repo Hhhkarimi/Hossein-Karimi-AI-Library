@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "کاربردهای واقعی هوش مصنوعی",
+    "language": "fa",
+    "direction": "rtl",
+    "slide_count": 6,
+    "audience": "مدیران و متخصصان فناوری",
+    "goal": "آموزش و برندسازی تخصصی"
+  },
+  "identity": {
+    "name": "نام شما",
+    "portrait_path": "./portrait.jpg"
+  },
+  "palette": {
+    "name": "Executive Tech",
+    "background": "#F8FBFD",
+    "surface": "#FFFFFF",
+    "primary": "#082B5C",
+    "accent": "#10BBD4",
+    "text": "#16324F",
+    "muted": "#60758A",
+    "border": "#D7E4EE"
+  },
+  "typography": {
+    "heading_family": "Vazirmatn/Noto Sans Arabic fallback",
+    "body_family": "Vazirmatn/Noto Sans Arabic fallback",
+    "use_persian_digits": true
+  },
+  "style": {
+    "preset": "executive-tech",
+    "keywords": ["تمیز", "تکنولوژیک", "اجرایی", "مینیمال"],
+    "art_direction": "پس‌زمینه سفید، هندسه محدود سرمه‌ای/فیروزه‌ای، کارت‌های تمیز و آیکون‌های خطی یکدست"
+  },
+  "rendering": {
+    "mode": "auto",
+    "width": 1080,
+    "height": 1350,
+    "output_format": "png"
+  },
+  "slides": [
+    {
+      "index": 1,
+      "kind": "cover",
+      "eyebrow": "کاروسل لینکدین",
+      "title": "۶ کاربرد واقعی هوش مصنوعی در کسب‌وکار",
+      "subtitle": "خلاصه‌ای کوتاه، کاربردی و تصویری",
+      "portrait": true,
+      "byline": "ارائه: نام شما"
+    },
+    {
+      "index": 2,
+      "kind": "content",
+      "title": "از زیرساخت تا اتوماسیون",
+      "cards": [
+        {"heading": "۱) زیرساخت", "icon": "layers", "bullets": ["مسیریابی و کنترل ورودی", "مدیریت کانتکست", "گاردریل و ارزیابی"]},
+        {"heading": "۲) اتوماسیون", "icon": "browser", "bullets": ["مرورگر و دسکتاپ", "انتخاب اقدام بعدی", "کاهش هزینه اجرا"]}
+      ]
+    },
+    {"index": 3, "kind": "content", "title": "تصمیم‌گیری سریع", "cards": []},
+    {"index": 4, "kind": "content", "title": "محتوا و داده", "cards": []},
+    {"index": 5, "kind": "content", "title": "توسعه و عملیات", "cards": []},
+    {"index": 6, "kind": "summary", "title": "جمع‌بندی", "summary": "سرعت و هزینه پایین، وقتی تصمیم کوچک و پرتکرار است."}
+  ]
+}

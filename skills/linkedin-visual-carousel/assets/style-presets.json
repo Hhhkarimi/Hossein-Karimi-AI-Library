@@ -1,0 +1,44 @@
+{
+  "executive-tech": {
+    "keywords": ["premium", "clean", "corporate", "technology", "editorial"],
+    "geometry": "rounded cards, restrained diagonal shapes, subtle dot matrix",
+    "icon_style": "outline icons, navy stroke, cyan accent",
+    "shadow": "very subtle",
+    "spacing": "generous"
+  },
+  "editorial-minimal": {
+    "keywords": ["minimal", "magazine", "typographic", "restrained"],
+    "geometry": "thin rules and whitespace",
+    "icon_style": "minimal or none",
+    "shadow": "none",
+    "spacing": "very generous"
+  },
+  "bold-gradient": {
+    "keywords": ["energetic", "creator", "modern", "bold"],
+    "geometry": "large gradient blocks and rounded shapes",
+    "icon_style": "bold duotone",
+    "shadow": "soft",
+    "spacing": "moderate"
+  },
+  "luxury-data": {
+    "keywords": ["premium", "executive", "finance", "strategic"],
+    "geometry": "fine rules, quiet panels",
+    "icon_style": "thin premium line icons",
+    "shadow": "minimal",
+    "spacing": "generous"
+  },
+  "warm-educational": {
+    "keywords": ["friendly", "educational", "approachable"],
+    "geometry": "soft rounded blocks",
+    "icon_style": "friendly outline icons",
+    "shadow": "soft",
+    "spacing": "generous"
+  },
+  "cyber-technical": {
+    "keywords": ["technical", "dark", "cyber", "data"],
+    "geometry": "grid and technical motifs",
+    "icon_style": "monoline technical icons",
+    "shadow": "glow used sparingly",
+    "spacing": "moderate"
+  }
+}
