@@ -8,5 +8,6 @@
   "palette_preference": "recommend",
   "audience": "مدیران محصول، مهندسان و تصمیم‌گیران",
   "goal": "آموزش و برندسازی تخصصی",
-  "approval_mode": "autopilot"
+  "workflow_mode": "interactive",
+  "interaction_expectation": "سه پیشنهاد استایل/رنگ، تأیید نقشه اسلایدها، سپس تأیید تصویر کاور قبل از ساخت بقیه تصاویر"
 }

@@ -7,10 +7,18 @@
 - [ ] No repeated bullets across slides.
 - [ ] Final slide closes the story.
 
+## Interaction
+- [ ] Already supplied inputs were not asked for again.
+- [ ] Missing style/palette received curated recommendations, not vague questioning.
+- [ ] Slide map was shown in interactive mode.
+- [ ] Cover proof was shown and approved before full render, unless express mode was explicitly requested.
+- [ ] User feedback was translated into concrete design changes.
+
 ## Identity
 - [ ] Exact name spelling.
 - [ ] Portrait identity preserved.
 - [ ] Logo/handle used only if supplied.
+- [ ] Portrait is not needlessly repeated on every slide.
 
 ## Persian / RTL
 - [ ] RTL reading order is correct.
@@ -25,6 +33,7 @@
 - [ ] Same icon family.
 - [ ] Consistent title and body scale.
 - [ ] Consistent slide indicator.
+- [ ] Remaining slides visibly match the approved cover style anchor.
 
 ## LinkedIn mobile legibility
 - [ ] No tiny body copy.
@@ -32,8 +41,10 @@
 - [ ] Safe margins at edges.
 - [ ] Portrait face remains readable at thumbnail size.
 
-## Delivery
+## Image delivery
 - [ ] Files are zero-padded and ordered.
-- [ ] PNG dimensions are 1080×1350.
+- [ ] Final images are 4:5, preferably 1080×1350 PNG.
 - [ ] No placeholder text.
-- [ ] PDF order matches PNG order if exported.
+- [ ] No watermark or accidental extra text.
+- [ ] Individual slide images are delivered.
+- [ ] No PDF was created or presented as output.

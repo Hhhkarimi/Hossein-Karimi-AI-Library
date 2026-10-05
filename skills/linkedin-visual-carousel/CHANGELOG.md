@@ -1,11 +1,18 @@
 # Changelog
 
-## 1.0.0 — 2026-10-05
-- Initial production release.
-- Added content-aware palette recommendations.
-- Added portrait/name/style intake protocol.
-- Added Persian/RTL rules and Persian-number QA.
-- Added cover-first style-anchor rendering workflow.
-- Added spec validator and per-slide prompt builder.
-- Added exact-layout HTML fallback.
-- Added optional PNG post-processing, contact sheet, and PDF export.
+## 2.0.0 — Interactive image-first workflow
+
+- Made interactive workflow the default.
+- Added staged discovery, visual-direction selection, slide-map approval, and cover-proof feedback.
+- Added explicit express mode for users who want no checkpoints.
+- Added `references/interaction-playbook.md`.
+- Made actual carousel images mandatory for completion.
+- Restricted final user-facing deliverables to individual carousel images.
+- Removed all PDF output and deleted the PDF exporter.
+- Removed prompt-only fallback as a valid finished deliverable.
+- Strengthened portrait/name/style/color interaction behavior.
+- Strengthened cover-as-style-anchor consistency requirements.
+
+## 1.0.0
+
+- Initial production skill with palette recommendation, portrait handling, RTL/Persian support, image prompt generation, QA, post-processing, and optional document export.

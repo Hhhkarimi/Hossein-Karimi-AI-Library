@@ -7,6 +7,12 @@
     "audience": "مدیران و متخصصان فناوری",
     "goal": "آموزش و برندسازی تخصصی"
   },
+  "interaction": {
+    "workflow_mode": "interactive",
+    "visual_direction_locked": true,
+    "content_map_approved": true,
+    "cover_approved": false
+  },
   "identity": {
     "name": "نام شما",
     "portrait_path": "./portrait.jpg"
@@ -16,7 +22,7 @@
     "background": "#F8FBFD",
     "surface": "#FFFFFF",
     "primary": "#082B5C",
-    "accent": "#10BBD4",
+    "accent": "#008DA8",
     "text": "#16324F",
     "muted": "#60758A",
     "border": "#D7E4EE"
@@ -28,7 +34,12 @@
   },
   "style": {
     "preset": "executive-tech",
-    "keywords": ["تمیز", "تکنولوژیک", "اجرایی", "مینیمال"],
+    "keywords": [
+      "تمیز",
+      "تکنولوژیک",
+      "اجرایی",
+      "مینیمال"
+    ],
     "art_direction": "پس‌زمینه سفید، هندسه محدود سرمه‌ای/فیروزه‌ای، کارت‌های تمیز و آیکون‌های خطی یکدست"
   },
   "rendering": {
@@ -52,13 +63,49 @@
       "kind": "content",
       "title": "از زیرساخت تا اتوماسیون",
       "cards": [
-        {"heading": "۱) زیرساخت", "icon": "layers", "bullets": ["مسیریابی و کنترل ورودی", "مدیریت کانتکست", "گاردریل و ارزیابی"]},
-        {"heading": "۲) اتوماسیون", "icon": "browser", "bullets": ["مرورگر و دسکتاپ", "انتخاب اقدام بعدی", "کاهش هزینه اجرا"]}
+        {
+          "heading": "۱) زیرساخت",
+          "icon": "layers",
+          "bullets": [
+            "مسیریابی و کنترل ورودی",
+            "مدیریت کانتکست",
+            "گاردریل و ارزیابی"
+          ]
+        },
+        {
+          "heading": "۲) اتوماسیون",
+          "icon": "browser",
+          "bullets": [
+            "مرورگر و دسکتاپ",
+            "انتخاب اقدام بعدی",
+            "کاهش هزینه اجرا"
+          ]
+        }
       ]
     },
-    {"index": 3, "kind": "content", "title": "تصمیم‌گیری سریع", "cards": []},
-    {"index": 4, "kind": "content", "title": "محتوا و داده", "cards": []},
-    {"index": 5, "kind": "content", "title": "توسعه و عملیات", "cards": []},
-    {"index": 6, "kind": "summary", "title": "جمع‌بندی", "summary": "سرعت و هزینه پایین، وقتی تصمیم کوچک و پرتکرار است."}
+    {
+      "index": 3,
+      "kind": "content",
+      "title": "تصمیم‌گیری سریع",
+      "cards": []
+    },
+    {
+      "index": 4,
+      "kind": "content",
+      "title": "محتوا و داده",
+      "cards": []
+    },
+    {
+      "index": 5,
+      "kind": "content",
+      "title": "توسعه و عملیات",
+      "cards": []
+    },
+    {
+      "index": 6,
+      "kind": "summary",
+      "title": "جمع‌بندی",
+      "summary": "سرعت و هزینه پایین، وقتی تصمیم کوچک و پرتکرار است."
+    }
   ]
 }

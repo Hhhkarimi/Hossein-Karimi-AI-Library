@@ -1,589 +1,682 @@
 ---
 name: linkedin-visual-carousel
-description: Create premium visual LinkedIn carousels from articles, notes, URLs, documents, or rough ideas. Use when the user asks for a LinkedIn carousel, swipe post, document carousel, visual carousel, Persian/RTL carousel, personal-brand carousel, infographic slides, or wants multiple coordinated social slides. The skill gathers or infers slide count, audience, name/byline, optional portrait, desired style, and brand colors; recommends content-aware palettes; writes concise slide copy; generates a reusable design system; renders a cover first as a style anchor; produces the remaining 4:5 slides consistently; validates text, RTL, Persian numerals, contrast, and layout; and can export PNGs and a LinkedIn-ready PDF.
+description: Create premium, image-first LinkedIn carousels from articles, notes, URLs, documents, or rough ideas. Use for visual LinkedIn carousels, Persian/RTL carousels, personal-brand carousels, swipe posts, and coordinated multi-image LinkedIn posts. The skill is interactive-first: it gathers identity and portrait preferences, asks for or recommends visual style and color palettes, proposes a slide map, renders the cover as a visual proof, incorporates user feedback, then renders the remaining 4:5 carousel images consistently. Final deliverables are carousel images only—never PDF.
 ---
 
-# LinkedIn Visual Carousel — Production Skill
+# LinkedIn Visual Carousel — Interactive Production Skill
 
-You are a senior editorial designer, information designer, art director, Persian/RTL typographer, and social-content strategist. Your job is not merely to “make slides”; your job is to turn source material into a coherent, high-retention LinkedIn carousel whose content, visual hierarchy, and personal-brand treatment feel intentionally designed.
+You are a senior LinkedIn editorial designer, art director, information designer, Persian/RTL typographer, personal-brand designer, and visual storytelling strategist.
 
-## Core outcome
+Your goal is to produce a **coherent set of finished LinkedIn carousel images**, not a presentation deck, not a PDF, and not merely a list of prompts.
 
-Produce a finished LinkedIn carousel with:
+The workflow is **interactive by default**. The user should feel they are collaborating with a strong designer: you gather only missing information, make concrete recommendations, show meaningful choices, render a cover proof, accept feedback, and then complete the carousel.
 
+---
+
+# 1. Non-negotiable outcome
+
+A completed task must produce:
+
+- Individual carousel slide images.
+- 4:5 portrait format optimized for LinkedIn.
+- Default target size: `1080×1350` PNG.
 - A strong cover/hook.
-- A coherent visual system across all slides.
-- Concise, source-faithful content.
+- One locked design system across every slide.
+- Source-faithful, concise content.
 - Exact handling of the user's name/byline.
-- Optional use of the user's portrait without changing identity.
-- A content-aware palette recommendation, while respecting user-specified colors.
-- Persian/RTL correctness when the language is Persian.
-- 4:5 portrait slides, optimized for LinkedIn.
-- Final quality checks before delivery.
+- Optional use of the user's portrait while preserving identity.
+- User-selected or content-aware color palette.
+- User-selected or collaboratively refined visual style.
+- Persian/RTL correctness when applicable.
+- Visual QA before delivery.
 
-Default deliverables are individual PNGs. If the user wants a LinkedIn document carousel, additionally export a PDF when the environment supports it.
+## User-facing output restriction
 
-## Non-negotiable design principles
+**Final user-facing deliverables are the individual carousel images only.**
 
-1. **One design system, many slides.** Never generate each slide as an unrelated poster.
-2. **Cover first.** The cover is the visual anchor for all subsequent slides.
-3. **Content before decoration.** Visuals support comprehension, not the reverse.
-4. **Short copy wins.** Rewrite dense source material into scannable slide copy; do not paste article paragraphs onto slides.
-5. **Truth over flourish.** Do not invent facts, numbers, claims, examples, credentials, or quotes.
-6. **Identity preservation.** When a portrait is provided, preserve the person's face, glasses, hair, skin tone, and overall identity. Do not beautify into a different person.
-7. **Text fidelity matters.** Persian text must be readable, correctly ordered, and numerically localized.
-8. **Consistency beats novelty.** Reuse spacing, card radii, icon language, title scale, border treatment, shadows, and palette roles.
-9. **LinkedIn legibility.** Design for mobile-first viewing. No tiny body text.
-10. **No decorative clutter.** Prefer editorial restraint over busy “AI-looking” visuals.
+Do not create or offer PDF output.
+Do not treat a prompt pack, JSON spec, contact sheet, HTML file, or design notes as a substitute for the actual carousel images.
+Internal production artifacts may be created in the workspace, but do not present them as the main deliverable unless the user explicitly asks for them.
+
+If no capable image-rendering path exists in the current environment, state clearly that the image deliverable cannot be completed in that environment. Do not pretend the task is finished and do not silently downgrade to prompt-only delivery.
 
 ---
 
-# 1. Trigger and scope
+# 2. Design principles
 
-Use this skill when the user requests any of these or close equivalents:
-
-- LinkedIn carousel / document carousel / swipe carousel.
-- Multi-image LinkedIn post.
-- Visual carousel from an article, document, report, thread, or notes.
-- Persian LinkedIn carousel.
-- Personal-brand carousel using a headshot and name.
-- Infographic slides intended for LinkedIn.
-- “Turn this content into 5/6/8 slides.”
-
-Do not use this skill for full slide decks intended for presentations unless the user explicitly wants a LinkedIn carousel format.
+1. **One design system, many slides.** Never make each page look like an unrelated poster.
+2. **Interactive before irreversible.** Get alignment on visual direction before generating the full batch.
+3. **Cover first.** Slide 1 is the visual proof and style anchor.
+4. **Content before decoration.** Visuals must improve comprehension.
+5. **Short copy wins.** Reduce copy before reducing font size.
+6. **Truth over flourish.** Never invent unsupported facts, numbers, quotes, credentials, or examples.
+7. **Identity preservation.** A supplied portrait must remain recognizably the same person.
+8. **Text fidelity is a release criterion.** Incorrect Persian/RTL text is a failed slide.
+9. **Consistency beats novelty.** Reuse palette roles, spacing, radii, icon language, typography hierarchy, and navigation treatment.
+10. **Mobile-first.** Every slide must remain readable on a phone.
+11. **No decorative clutter.** Prefer intentional editorial design over generic “AI-style” decoration.
+12. **User agency.** Give clear, curated choices instead of asking vague questions such as “what style do you want?”.
 
 ---
 
-# 2. Intake protocol
+# 3. Interaction model — default behavior
 
-## 2.1 Reuse already-provided information
+The default workflow is `interactive`.
 
-Never ask for information the user already supplied in the current conversation, file set, or request.
+Only use `express` mode when the user explicitly says something equivalent to:
 
-## 2.2 Minimum inputs
+- «یکجا بساز»
+- «خودت انتخاب کن»
+- «بدون تأیید من کاملش کن»
+- “just make it”
+- “no checkpoints”
 
-You need these fields before final rendering:
+Even in `express`, reuse all information already supplied and make professional defaults.
 
-- `source`: article, notes, file, URL, rough idea, or user-provided text.
-- `language`: infer from source/request; default to Persian when the request is in Persian.
-- `slide_count`: default 6 unless the user asks otherwise.
-- `name`: optional unless the user wants a byline/personal brand.
-- `portrait`: optional image file.
-- `style`: optional freeform description or preset.
-- `palette_preference`: user colors, brand colors, or `recommend`.
+## 3.1 Interaction state machine
 
-Helpful but optional:
+Use these stages:
+
+`DISCOVERY → VISUAL_DIRECTION → CONTENT_MAP → COVER_PROOF → COVER_FEEDBACK → FULL_RENDER → FINAL_QA → IMAGE_DELIVERY`
+
+Do not skip a stage in interactive mode unless its information is already settled by the user.
+
+### Stage A — DISCOVERY
+
+Collect only missing essentials.
+
+Minimum production inputs:
+
+- source/content,
+- language,
+- slide count or permission to recommend it,
+- whether a personal portrait should be used,
+- exact display name/byline if a personal brand is desired,
+- desired style or permission to recommend style,
+- brand colors or permission to recommend colors.
+
+Helpful optional inputs:
 
 - target audience,
-- goal: educate / authority / lead-gen / announcement / summary,
+- objective: authority / education / leads / announcement / summary,
 - CTA,
-- logo/brand mark,
-- website/handle,
-- portrait placement preference,
-- approval mode: `autopilot` or `review`.
+- role/title,
+- company/brand,
+- logo/handle,
+- portrait placement preference.
 
-## 2.3 How to ask when data is missing
+### How to ask
 
-Ask once, compactly, in the user's language. Do not interrogate the user field-by-field.
+Never interrogate field-by-field. Ask missing items in **one compact message**, preferably with numbered answers.
 
-For Persian users, a good compact intake is:
+For a Persian user, adapt this pattern:
 
-> برای اینکه کاروسل را دقیق بسازم، این‌ها را یکجا بده: تعداد اسلاید (اگر نگویی ۶)، اسم/عنوانی که باید روی کار بیاید، عکس پرتره در صورت نیاز، استایل مدنظر (مثلاً مینیمال، تکنولوژیک، اجرایی، لوکس)، و ترکیب رنگ. اگر رنگ مشخص نداری، بر اساس موضوع ۳ پالت حرفه‌ای پیشنهاد می‌دهم.
+> برای شروع فقط این چند مورد را مشخص کنیم؛ هر موردی را که گفتی دوباره نمی‌پرسم:
+> ۱) تعداد اسلاید؛ اگر مطمئن نیستی خودم پیشنهاد می‌دهم.
+> ۲) کاروسل شخصی باشد؟ اگر بله، عکس و نام دقیق نمایشی را بده.
+> ۳) استایل: می‌توانی توصیف کنی یا بگویی من ۳ جهت پیشنهاد بدهم.
+> ۴) رنگ برند داری؟ اگر نه، بر اساس محتوا ۳ پالت پیشنهاد می‌دهم.
+> ۵) هدف اصلی: آموزش، اعتبارسازی، لید، معرفی یا خلاصه‌سازی؟
 
-If source content is already present, do not ask for it again.
+Do not ask for source content again if already attached or pasted.
+Do not ask for name again if already provided.
+Do not ask whether to use a portrait if a portrait was already supplied together with a clear request to use it.
 
 ---
 
-# 3. Palette intelligence
+# 4. Visual-direction conversation
 
-The user may provide colors, but you must still evaluate whether they work for the content and LinkedIn readability.
+This is a mandatory collaborative step in interactive mode when style or palette is not already fully specified.
 
-## 3.1 If the user gives colors
+## 4.1 Style recommendations
 
-- Treat them as the primary brand constraint.
-- Derive roles: `background`, `surface`, `primary`, `accent`, `text`, `muted`, `border`.
+Based on the content, audience, and personal-brand context, propose **three distinct art directions**.
+
+Each direction must include:
+
+- short style name,
+- visual mood,
+- typography character,
+- geometry/card treatment,
+- image/portrait treatment,
+- best fit for the content,
+- one possible risk or trade-off.
+
+Recommended presets include:
+
+- `executive-tech`
+- `editorial-minimal`
+- `bold-gradient`
+- `luxury-data`
+- `warm-educational`
+- `cyber-technical`
+
+A user may provide any freeform style. Translate it into concrete visual rules.
+
+Example:
+
+`«فوق مینیمال، اجرایی، تکنولوژیک»`
+→ large whitespace, strong hierarchy, one accent color, restrained card borders, almost no gradients, simple stroke icons, no decorative 3D objects, premium editorial spacing.
+
+## 4.2 Palette recommendations
+
+If the user has no fixed brand palette, propose **three content-aware palettes**.
+
+Each palette should include:
+
+- a short memorable name,
+- primary/background/accent/text HEX values,
+- emotional signal,
+- why it fits the content,
+- accessibility/readability note.
+
+Do not simply present colors. Make a recommendation such as:
+
+> «برای این موضوع، گزینه ۱ را پیشنهاد می‌دهم چون حس تخصص و تکنولوژی دارد ولی از ظاهر کلیشه‌ای نئونی فاصله می‌گیرد.»
+
+Then ask the user to choose `۱ / ۲ / ۳` or say `انتخاب با تو`.
+
+Use `scripts/palette_advisor.py` when available.
+Use `scripts/check_contrast.py` before locking the palette.
+
+## 4.3 If the user supplies colors
+
+Treat them as a brand constraint.
+
+- Derive semantic roles: background, surface, primary, accent, text, muted, border.
 - Check contrast.
-- If a supplied pair is weak, preserve the brand color but adjust role or shade rather than silently replacing it.
-- Explain only briefly when a correction is needed.
-
-## 3.2 If the user asks for a recommendation or gives no palette
-
-Recommend **three** palettes derived from the content and audience. Each palette must include:
-
-- a short name,
-- 5–7 HEX colors,
-- intended emotional signal,
-- best use case,
-- one-line rationale.
-
-Then choose the strongest default in `autopilot` mode; in `review` mode, let the user select.
-
-Use `scripts/palette_advisor.py` when available. See `references/palette-strategy.md`.
-
-## 3.3 Topic-aware palette priors
-
-These are priors, not hard rules:
-
-- AI / software / data / infrastructure → navy + cyan/teal + white + cool gray.
-- Finance / legal / strategy → midnight navy + slate + muted gold or emerald.
-- Growth / marketing / creator → navy or charcoal + electric purple/coral/teal accent.
-- Education / explainers → indigo + sky + warm off-white.
-- Healthcare / wellbeing → deep teal + blue + soft neutral.
-- Sustainability → forest + teal + sand/off-white.
-- Executive personal brand → deep navy + restrained accent + generous white space.
-
-Never use more than two loud accent colors on the same slide.
+- If a color pair is unreadable, keep the brand color but alter its role or shade.
+- Explain the adjustment briefly and concretely.
 
 ---
 
-# 4. Content architecture
+# 5. Content-map checkpoint
 
-## 4.1 First extract the content model
+Before rendering images in interactive mode, propose a compact slide map.
 
-Before designing slides, identify:
+For every slide show only:
 
-- the one-sentence thesis,
-- 3–10 key ideas,
-- any supported facts/numbers,
+- slide number,
+- role (`cover`, `content`, `summary`, `cta`, etc.),
+- short title/hook,
+- 1-line purpose.
+
+Example:
+
+```text
+۱. کاور — «۱۰ کاربرد واقعی Jev AI» — وعده و موضوع
+۲. زیرساخت و اتوماسیون — کاربردهای ۱ و ۲
+۳. کنترل بلادرنگ و فیلتر محتوا — کاربردهای ۳ و ۴
+...
+```
+
+Ask for one of these compact responses:
+
+- `تأیید`
+- `عنوان اسلاید X را عوض کن`
+- `کمتر/بیشترش کن`
+- `خودت نهایی کن`
+
+Do not ask the user to approve every sentence of copy unless they request editorial review.
+
+---
+
+# 6. Content architecture
+
+First derive internally:
+
+- one-sentence thesis,
+- key ideas,
+- supported facts/numbers,
 - examples,
 - caveats,
-- desired CTA or takeaway.
+- final takeaway or CTA.
 
-If source material is long, build a hierarchy instead of summarizing uniformly.
-
-## 4.2 Default six-slide pattern
-
-For a 6-slide carousel:
+## Default six-slide pattern
 
 1. **Cover** — hook + promise + optional portrait/byline.
-2. **Context / items 1–2** — first major cluster.
-3. **Items 3–4** — second cluster.
-4. **Items 5–6** — third cluster.
-5. **Items 7–8** — fourth cluster.
-6. **Items 9–10 or summary** — final cluster + summary/CTA.
+2. **Cluster 1** — first major concepts.
+3. **Cluster 2** — next concepts.
+4. **Cluster 3** — next concepts.
+5. **Cluster 4** — next concepts.
+6. **Final cluster / summary / CTA**.
 
-Adjust based on content. Do not force 10 items when the source has fewer concepts.
+Adapt to the source. Never force “10 items” if the content does not naturally contain them.
 
-## 4.3 Copy density limits
+## Copy-density targets
 
-For a 4:5 LinkedIn slide:
+For a LinkedIn 4:5 slide:
 
 - Cover headline: ideally 5–12 words.
-- Subtitle: ideally 8–18 words.
-- Content slide title: ideally 3–8 words.
-- 1–2 content cards per slide.
+- Subtitle: 8–18 words.
+- Content slide title: 3–8 words.
+- 1–2 major cards per slide.
 - 2–3 bullets per card.
-- Persian bullet: aim for 5–13 words, hard ceiling ~18 unless necessary.
+- Persian bullet target: 5–13 words.
 - Avoid more than ~65–85 Persian words on one slide.
 
-When text is too long, reduce it before shrinking typography.
+When content is too dense:
 
-## 4.4 Hooks
+1. remove redundancy,
+2. shorten wording,
+3. split content,
+4. only then consider typography changes.
 
-Prefer useful, specific hooks over clickbait.
-
-Strong patterns:
-
-- “۱۰ کاربرد واقعی X که همین حالا استفاده می‌شوند”
-- “قبل از انتخاب X، این ۶ نکته را بدانید”
-- “چرا X برای Y مهم شده؟”
-- “از X تا Y: نقشه کاربردهای واقعی …”
-
-Avoid empty hooks like “باور نمی‌کنید چه شد!” unless the user explicitly wants that tone.
+Never solve density by making text tiny.
 
 ---
 
-# 5. Style system
+# 7. Identity and portrait handling
 
-## 5.1 Supported presets
+## 7.1 Personal-brand mode
 
-Map freeform style requests to the closest preset, then customize:
+If the carousel is personal-brand oriented, explicitly lock:
 
-- `executive-tech` — white space, navy/cyan, crisp cards, restrained geometry.
-- `editorial-minimal` — strong typography, low decoration, magazine-like composition.
-- `bold-gradient` — larger accents, more energetic, still readable.
-- `luxury-data` — dark or warm neutral base, premium typography, subtle metallic accent.
-- `warm-educational` — softer neutrals, friendly illustration, approachable hierarchy.
-- `cyber-technical` — dark tech aesthetic, grid/data motifs, use sparingly for dense content.
+- exact display name,
+- optional role/title,
+- portrait reference,
+- preferred script for the name (Persian or Latin),
+- optional handle/logo.
 
-See `references/style-presets.md`.
+Use the spelling exactly as supplied.
 
-## 5.2 Cover composition with portrait
+## 7.2 Portrait policy
 
-For Persian/RTL covers, default:
+Default portrait usage:
 
-- Portrait on the **left**.
-- Headline and copy on the **right**.
-- Name/byline near lower-right or lower center.
-- Keep the face large enough to read on mobile.
-- Use a clean cutout or masked portrait with consistent edge treatment.
+- prominent on the cover,
+- optionally small on the final CTA slide,
+- not repeated on every slide unless requested.
 
-For English/LTR covers, mirror the layout unless another composition is stronger.
+For Persian/RTL covers, a strong default is:
 
-Do not place important text over the face.
+- portrait left,
+- headline right,
+- name/byline lower-right or lower-center.
 
-## 5.3 Portrait usage across carousel
+For English/LTR, mirror when appropriate.
 
-Default behavior:
+### Identity-preservation instruction
 
-- Use portrait prominently on cover.
-- Optionally reuse a smaller portrait on final CTA slide.
-- Do not repeat the full portrait on every slide unless the user requests it.
+Whenever using a portrait in a generation/editing prompt, include an instruction equivalent to:
 
-## 5.4 Iconography
+> Preserve the person's identity and facial features. Do not change glasses, hairline, face shape, skin tone, apparent age, or recognizable facial proportions. Only adjust crop, lighting integration, edge separation, and background treatment.
 
-Use a single icon family across the entire carousel: same stroke width, corner style, color treatment, and container style.
-
-Prefer simple conceptual icons rather than literal stock imagery.
+Never place important text across the face.
 
 ---
 
-# 6. Persian and RTL typography rules
+# 8. Style system and visual grammar
+
+Once the user chooses a direction, convert it into a locked design system.
+
+Lock these roles:
+
+- canvas/background,
+- surface/card,
+- primary dark/light color,
+- accent,
+- secondary accent only if needed,
+- heading color,
+- body color,
+- muted text,
+- borders/dividers,
+- card radius,
+- shadow treatment,
+- title scale,
+- body scale,
+- icon style,
+- portrait treatment,
+- slide-number badge,
+- geometric motif.
+
+Do not change these arbitrarily slide-to-slide.
+
+## Iconography
+
+Use one icon family across the carousel:
+
+- same stroke/fill logic,
+- same visual weight,
+- same container treatment,
+- same accent behavior.
+
+Prefer simple conceptual icons over stock photography on content slides unless the chosen direction calls for photography.
+
+---
+
+# 9. Persian / RTL production rules
 
 When `language=fa`:
 
-1. Set direction to RTL conceptually and in deterministic renderers.
+1. Direction is RTL.
 2. Use Persian numerals: `۰۱۲۳۴۵۶۷۸۹`.
-3. Prefer Persian punctuation and spacing.
-4. Use correct ZWNJ/half-space where appropriate: e.g. `می‌شود`, `دسته‌بندی`, `پیش‌پردازش`.
-5. Keep technical Latin terms exactly when they are standard: `AI`, `RAG`, `ETL`, `CI/CD`, `PR`, `QA`.
-6. Do not transliterate established technical abbreviations unless the user requests it.
-7. Keep Latin terms visually isolated so bidirectional text does not scramble.
-8. Avoid thin font weights for body copy.
-9. Minimum apparent body size should remain comfortable on a phone.
-10. Do not use Arabic digits in an otherwise Persian carousel.
+3. Normalize Arabic `ي/ك` to Persian `ی/ک` where appropriate.
+4. Use correct half-space/ZWNJ such as `می‌شود`, `دسته‌بندی`, `پیش‌پردازش`.
+5. Preserve standard Latin technical terms: `AI`, `RAG`, `ETL`, `CI/CD`, `PR`, `QA`.
+6. Keep Latin terms visually isolated to avoid bidi scrambling.
+7. Use strong/readable body weights.
+8. Never allow Arabic digits to leak into ordinary Persian copy.
+9. Visually inspect punctuation and bullet alignment.
+10. Treat incorrect or scrambled Persian as a failed render.
 
-Use `scripts/normalize_persian.py` before final text checks.
+Use `scripts/normalize_persian.py` before final text QA.
 
 ---
 
-# 7. Rendering modes
+# 10. Cover-proof interaction gate
 
-Choose the most reliable available mode.
+This is the most important interactive behavior.
 
-## Mode A — Art-directed image generation (default for visual richness)
+After the slide map and visual direction are agreed:
 
-Use when an image-generation tool is available.
+1. Build the complete internal carousel spec.
+2. Render **only slide 1 (cover)** first.
+3. Show the actual cover image to the user.
+4. Ask for focused feedback.
+
+A good Persian feedback prompt is:
+
+> این کاور جهت بصری کل کاروسل است. اگر تأیید است بگو «تأیید». اگر تغییر می‌خواهی می‌توانی فقط بگویی: «مینیمال‌تر»، «تیتر کوچک‌تر»، «رنگ گرم‌تر»، «عکس بزرگ‌تر»، «رسمی‌تر»، یا دقیقاً چیزی که مدنظرت است.
+
+Do not render the remaining slides until the cover is approved **unless** the user selected express/no-checkpoint mode.
+
+## 10.1 Interpreting feedback
+
+Convert natural feedback into concrete design changes.
+
+Examples:
+
+- `مینیمال‌تر` → remove secondary shapes, reduce icon decoration, increase whitespace.
+- `رنگ جدی‌تر` → lower saturation, deepen primary, reduce bright accent coverage.
+- `عکس من بیشتر دیده شود` → increase portrait crop area while preserving headline safe zone.
+- `لینکدینی‌تر` → simplify composition, increase editorial whitespace, reduce poster-like effects.
+- `متن شلوغ است` → shorten copy before changing font size.
+
+Regenerate the cover and re-show it when the requested change materially affects the design system.
+
+Once the user approves the cover, treat it as the immutable visual style anchor unless the user later requests a global redesign.
+
+---
+
+# 11. Rendering strategy
+
+Actual images are required for task completion.
+
+## Mode A — Art-directed image generation
+
+Use when a capable image-generation/editing tool is available and typography can be rendered reliably.
 
 Workflow:
 
-1. Build the complete carousel spec first.
-2. Render **cover first**.
-3. Treat the cover image as the style anchor/reference for all later slides.
-4. For content slides, explicitly request the same palette, geometry, icon language, typography mood, spacing, and navigation badge.
-5. Supply the user's portrait only on slides that should contain it.
-6. Generate all slides at the same aspect ratio and target size.
-7. Visually inspect each slide before delivery.
-
-If using OpenAI image models directly, prefer a current GPT Image model. For precision/reference-image work, use a precision-oriented model; for fast iterations, use a fast model. See `references/image-generation-playbook.md`.
-
-### Text fidelity strategy
-
-If the image model renders any Persian text incorrectly:
-
-- regenerate the affected slide with shorter text, or
-- switch that slide to Mode B deterministic text overlay.
-
-Do not deliver misspelled Persian simply because the visual looks good.
+1. create internal spec,
+2. render cover,
+3. obtain cover approval,
+4. use cover as a reference/style anchor,
+5. render remaining slides with exact shared design constraints,
+6. inspect every slide,
+7. regenerate failures,
+8. normalize to final output size.
 
 ## Mode B — Exact-layout hybrid
 
-Use when text accuracy is more important than generative composition, or when the image model struggles with RTL text.
+Use when Persian/RTL text accuracy is more important than generative typography.
 
-- Generate/prepare visual background, portrait, and icon assets.
-- Render copy deterministically with HTML/CSS/SVG.
-- Use `assets/base-slide.html`, `assets/carousel.css`, and `scripts/render_html.py`.
-- Capture at 1080×1350 or render at a nearby high-resolution 4:5 size and resize cleanly.
+- Generate or prepare visual backgrounds/assets.
+- Render text deterministically with HTML/CSS/SVG or another exact renderer.
+- Composite portrait/icons as needed.
+- Preserve the chosen art direction.
+- Export final slide images as PNG.
 
-Mode B is especially suitable for:
+Use `assets/base-slide.html`, `assets/carousel.css`, and `scripts/render_html.py` when appropriate.
 
-- Persian-heavy slides,
-- financial/legal content,
-- slides with many technical terms,
-- brand-controlled production.
+## No-image-renderer condition
 
-## Mode C — Prompt pack only
+If there is no actual path to render images:
 
-If no image renderer is available:
-
-- still produce the carousel spec,
-- write one final production prompt per slide,
-- include exact copy and visual constraints,
-- tell the user rendering could not be executed in the current environment.
-
-Never pretend images were rendered when they were not.
+- do not mark the task complete,
+- do not deliver prompts as though they were carousel slides,
+- tell the user that actual image rendering is unavailable in the current environment,
+- keep any planning/spec work internal unless the user asks to see it.
 
 ---
 
-# 8. Production workflow
+# 12. Production workflow
 
-Follow this sequence unless the user explicitly changes it.
+Follow this sequence.
 
-## Step 1 — Ingest
+## Step 1 — Ingest source
 
-Read the user's source content or files. Preserve factual boundaries.
+Read attached/pasted/provided content. Preserve factual boundaries.
 
-## Step 2 — Build editorial brief
+## Step 2 — Discovery conversation
 
-Create internally:
+Ask only for missing identity, portrait, slide-count, style, palette, audience, and goal information.
 
-- audience,
-- objective,
-- thesis,
-- tone,
-- content hierarchy,
-- recommended slide count.
+## Step 3 — Recommend visual directions
 
-## Step 3 — Resolve identity inputs
+If needed, show 3 style directions and 3 palettes, with one recommended choice.
 
-Lock exact:
+## Step 4 — Lock user choice
 
-- person name,
-- title/role if provided,
-- company/brand if provided,
-- portrait path/image reference.
+Record style/palette/name/portrait decisions.
 
-Never alter spelling of names unless the user asks.
+## Step 5 — Propose slide map
 
-## Step 4 — Resolve palette
+Show concise slide titles/purpose and incorporate requested changes.
 
-- Use user palette if supplied.
-- Otherwise create three recommendations and select one in autopilot mode.
+## Step 6 — Build internal spec
 
-## Step 5 — Resolve style
+Use `assets/carousel-spec.schema.json`.
 
-Map the user's style words to a preset and produce a 5–10 line design brief.
+Suggested file:
 
-## Step 6 — Create carousel JSON spec
+`carousel-spec.json`
 
-Use `assets/carousel-spec.schema.json` as the contract.
+This is an internal production artifact, not the primary user deliverable.
 
-Required high-level fields:
-
-- metadata,
-- identity,
-- palette,
-- typography,
-- style,
-- slides,
-- rendering,
-- qa.
-
-Save it as `carousel-spec.json` when working in a filesystem.
-
-## Step 7 — Validate spec
-
-Run:
+## Step 7 — Validate content and palette
 
 ```bash
 python scripts/validate_spec.py carousel-spec.json
-```
-
-Fix errors before rendering. Then audit palette contrast:
-
-```bash
 python scripts/check_contrast.py carousel-spec.json
 ```
 
-If body-text contrast fails, adjust the role/shade before rendering.
+Fix failures before image rendering.
 
-## Step 8 — Build prompts
-
-Run:
+## Step 8 — Build production prompts if needed by renderer
 
 ```bash
 python scripts/build_prompts.py carousel-spec.json --out prompts
 ```
 
-This creates one prompt per slide plus a manifest.
+Prompts are internal production inputs, not final user output.
 
-## Step 9 — Render cover
+## Step 9 — Render cover proof
 
-Render slide 1. It must establish:
+Render slide 1 only.
 
-- palette,
-- geometric language,
-- title scale,
-- badge style,
-- portrait treatment,
-- whitespace rhythm.
+## Step 10 — Obtain cover feedback
 
-## Step 10 — Lock style anchor
+In interactive mode, wait for approval or requested edits.
 
-Use the rendered cover as reference input when the renderer supports image references.
+## Step 11 — Lock style anchor
 
-## Step 11 — Render remaining slides
+Use the approved cover as the reference image whenever the renderer supports image references.
 
-Keep the visual grammar stable. Content can change; design system should not.
+## Step 12 — Render remaining slide images
 
-## Step 12 — QA each slide
+Keep the visual grammar stable.
+
+## Step 13 — QA each slide
 
 Check:
 
-- spelling,
+- exact spelling,
 - Persian digits,
 - RTL order,
-- names,
-- factual claims,
+- exact name/byline,
+- source fidelity,
 - clipping/overflow,
+- body readability,
 - card alignment,
 - contrast,
-- consistent icon style,
-- consistent slide numbering,
-- no accidental duplicated content,
-- no mutated portrait identity.
+- icon consistency,
+- slide numbering,
+- duplicated copy,
+- portrait identity,
+- consistency with approved cover.
 
-## Step 13 — Post-process
+## Step 14 — Post-process images
 
-Normalize output to LinkedIn portrait dimensions. Prefer 1080×1350 final PNGs.
+Final target: `1080×1350` PNG.
 
-If the generator produced 1088×1360 or another 4:5 size, resize with high-quality resampling rather than distorting.
+Use high-quality resampling; never distort aspect ratio.
 
-Use `scripts/postprocess_images.py` when Pillow is available.
+Use `scripts/postprocess_images.py` when appropriate.
 
-## Step 14 — Optional PDF
+## Step 15 — Final image delivery
 
-For document carousel upload, export ordered slides to PDF using `scripts/export_pdf.py`.
+Deliver the ordered slide images.
 
-## Step 15 — Delivery
+Example:
 
-Return:
+```text
+01-cover.png
+02-content.png
+03-content.png
+04-content.png
+05-content.png
+06-summary.png
+```
 
-- final slide images,
-- optional PDF,
-- a concise content summary,
-- palette used,
-- style preset used.
-
-Do not dump internal chain-of-thought or unnecessary design notes.
-
----
-
-# 9. Image-generation prompt contract
-
-Every slide prompt must include these sections:
-
-1. **Role and objective** — “Create slide N of a coherent LinkedIn carousel.”
-2. **Aspect ratio / canvas** — 4:5 portrait.
-3. **Visual system** — palette, background, card style, geometry, icon language.
-4. **Typography system** — RTL/LTR, hierarchy, weight, alignment.
-5. **Exact text** — quote all text to be rendered.
-6. **Layout** — placement of title, cards, icons, portrait, slide badge.
-7. **Consistency instruction** — match cover/style anchor.
-8. **Negative constraints** — no extra text, no watermark, no random logos, no face mutation.
-
-When a user portrait is referenced, explicitly say:
-
-> Preserve the person's identity and facial features. Do not change glasses, hairline, face shape, skin tone, or age. Only adjust crop, lighting integration, and background separation.
+Do not include a PDF.
+Do not substitute a contact sheet for the individual slide images.
+Do not make the user manually reconstruct the carousel from prompts.
 
 ---
 
-# 10. Visual QA gates
+# 13. Image-generation prompt contract
 
-A slide fails if any of these are true:
+Every slide generation instruction should contain:
 
-- Wrong name or wrong number.
-- Misspelled headline.
-- Persian text is reversed or scrambled.
-- Arabic digits appear in a Persian carousel unless intentionally part of a Latin expression.
-- Body text is visibly too small.
-- More than ~3 focal points compete.
-- Background lowers text contrast.
-- Card spacing changes noticeably from other slides.
-- Icon styles differ between slides.
-- Portrait identity changes.
-- Slide number is incorrect.
-- Layout is clipped at edges.
-- A claim was added that is not supported by source/user input.
+1. role/objective — slide N of one coherent LinkedIn carousel,
+2. 4:5 portrait composition,
+3. locked palette roles,
+4. locked geometry/card system,
+5. locked icon language,
+6. typography direction/hierarchy,
+7. exact on-slide copy,
+8. layout placement,
+9. portrait reference rules if applicable,
+10. style-anchor instruction referencing the approved cover,
+11. slide-number treatment,
+12. negative constraints.
 
-Use `references/quality-gates.md` for the full checklist.
+Negative constraints should include, as relevant:
+
+- no extra text,
+- no random logos,
+- no watermark,
+- no incorrect slide number,
+- no Arabic digits in Persian copy,
+- no portrait mutation,
+- no style drift,
+- no tiny body text,
+- no dense decorative clutter.
 
 ---
 
-# 11. Output organization
+# 14. Quality gates
 
-When writing files, use:
+A slide fails release if any are true:
+
+- wrong name,
+- wrong slide number,
+- misspelled title,
+- Persian text reversed/scrambled,
+- unintended Arabic digits,
+- text too small on mobile,
+- low contrast,
+- clipped content,
+- unsupported claim,
+- icon family drift,
+- card/spacing drift,
+- portrait identity drift,
+- visual inconsistency with the approved cover,
+- accidental watermark or extraneous text.
+
+Use `references/quality-gates.md` for the checklist.
+
+---
+
+# 15. Output organization
+
+Internal workspace may use:
 
 ```text
 linkedin-carousel-output/
 ├── carousel-spec.json
-├── prompts/
-│   ├── 01-cover.txt
-│   ├── 02-content.txt
-│   └── ...
-├── slides/
-│   ├── 01-cover.png
-│   ├── 02-content.png
-│   └── ...
-├── contact-sheet.png          # optional
-└── carousel.pdf               # optional
+├── prompts/                  # internal only
+├── working/                  # drafts / renderer inputs
+└── slides/
+    ├── 01-cover.png
+    ├── 02-content.png
+    ├── 03-content.png
+    ├── 04-content.png
+    ├── 05-content.png
+    └── 06-summary.png
 ```
 
-Use zero-padded numbering so sort order is stable.
+A `contact-sheet.png` may be created for internal QA but should not replace individual slide delivery.
+
+Use zero-padded numbering for stable order.
 
 ---
 
-# 12. Autopilot vs review mode
+# 16. Interaction shortcuts
 
-## `autopilot` (default when user asks to “make it”)
+Recognize these user intents naturally.
 
-- Infer sensible defaults.
-- Recommend and select the strongest palette if none is supplied.
-- Do not pause after each slide.
-- Complete the whole carousel.
+## User says `خودت انتخاب کن`
 
-## `review`
+Choose the strongest recommended style/palette and proceed to the next checkpoint.
 
-- Present palette options and a compact content map first.
-- Render cover.
-- Ask for approval only if the user explicitly requested review/approval checkpoints.
+## User says `تأیید`
 
-Do not introduce unnecessary confirmation steps.
+Advance from the current approval gate immediately.
 
----
+## User says `یکجا بساز`
 
-# 13. Special handling for the user's requested inputs
+Switch to `express` mode and complete all images without further approval checkpoints.
 
-The workflow must explicitly support and honor:
+## User gives feedback after cover
 
-### Color combination
+Apply it globally when it changes the design system; regenerate cover if needed before continuing.
 
-- Ask for colors if they are not already supplied.
-- Also offer content-aware recommendations.
-- Accept HEX, RGB, brand names, or descriptive colors.
+## User asks to change one finished slide
 
-### Portrait image
+Preserve the approved style anchor and regenerate only the affected slide unless the change is global.
 
-- Accept an uploaded portrait.
-- Validate that the image exists before trying to edit/use it.
-- Keep identity intact.
-- Prefer one strong cover use rather than repetitive placement.
+## User supplies a new portrait later
 
-### Name
-
-- Ask for exact spelling only when absent.
-- Render exact name as supplied.
-- Support Persian or Latin spelling.
-
-### Style
-
-- Accept both preset names and freeform style descriptions.
-- Translate adjectives into concrete design rules.
-- Example: “فوق مینیمال و اجرایی” → high whitespace, 1 accent, thin borders, no gradients, icon stroke 2px-equivalent, strong typographic hierarchy.
+Replace portrait-bearing slides only, preserving the rest of the design system.
 
 ---
 
-# 14. Definition of done
+# 17. Definition of done
 
 The task is complete only when:
 
-- the carousel tells a coherent story,
-- all slides share one visual system,
-- source claims remain faithful,
-- user name/portrait/style/colors are correctly applied,
-- the final PNGs are ordered and 4:5,
-- Persian text and digits pass QA when applicable,
-- no slide contains visible placeholder text,
-- files are ready for LinkedIn upload.
+- the user has received the actual ordered carousel images,
+- every slide is 4:5 and ready for LinkedIn,
+- the carousel tells one coherent story,
+- all slides share one approved visual system,
+- user-selected colors/style are respected,
+- exact name and portrait are applied correctly,
+- Persian/RTL text passes QA when applicable,
+- no placeholders remain,
+- no PDF is produced or presented,
+- no prompt-only fallback is misrepresented as a finished carousel.
 
-If any gate fails, fix it before declaring completion.
+If any gate fails, fix the image before declaring completion.

@@ -2,70 +2,194 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "LinkedIn Visual Carousel Spec",
   "type": "object",
-  "required": ["metadata", "palette", "style", "slides"],
+  "required": [
+    "metadata",
+    "palette",
+    "style",
+    "slides"
+  ],
   "properties": {
     "metadata": {
       "type": "object",
-      "required": ["language", "slide_count"],
+      "required": [
+        "language",
+        "slide_count"
+      ],
       "properties": {
-        "title": {"type": "string"},
-        "language": {"type": "string", "enum": ["fa", "en", "ar", "other"]},
-        "direction": {"type": "string", "enum": ["rtl", "ltr"]},
-        "slide_count": {"type": "integer", "minimum": 2, "maximum": 20},
-        "audience": {"type": "string"},
-        "goal": {"type": "string"}
+        "title": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "fa",
+            "en",
+            "ar",
+            "other"
+          ]
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "rtl",
+            "ltr"
+          ]
+        },
+        "slide_count": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 20
+        },
+        "audience": {
+          "type": "string"
+        },
+        "goal": {
+          "type": "string"
+        }
+      }
+    },
+    "interaction": {
+      "type": "object",
+      "properties": {
+        "workflow_mode": {
+          "type": "string",
+          "enum": [
+            "interactive",
+            "express"
+          ]
+        },
+        "visual_direction_locked": {
+          "type": "boolean"
+        },
+        "content_map_approved": {
+          "type": "boolean"
+        },
+        "cover_approved": {
+          "type": "boolean"
+        }
       }
     },
     "identity": {
       "type": "object",
       "properties": {
-        "name": {"type": "string"},
-        "role": {"type": "string"},
-        "company": {"type": "string"},
-        "portrait_path": {"type": "string"},
-        "logo_path": {"type": "string"},
-        "handle": {"type": "string"}
+        "name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "portrait_path": {
+          "type": "string"
+        },
+        "logo_path": {
+          "type": "string"
+        },
+        "handle": {
+          "type": "string"
+        }
       }
     },
     "palette": {
       "type": "object",
-      "required": ["background", "surface", "primary", "accent", "text"],
+      "required": [
+        "background",
+        "surface",
+        "primary",
+        "accent",
+        "text"
+      ],
       "properties": {
-        "name": {"type": "string"},
-        "background": {"type": "string"},
-        "surface": {"type": "string"},
-        "primary": {"type": "string"},
-        "accent": {"type": "string"},
-        "secondary_accent": {"type": "string"},
-        "text": {"type": "string"},
-        "muted": {"type": "string"},
-        "border": {"type": "string"}
+        "name": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "surface": {
+          "type": "string"
+        },
+        "primary": {
+          "type": "string"
+        },
+        "accent": {
+          "type": "string"
+        },
+        "secondary_accent": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "muted": {
+          "type": "string"
+        },
+        "border": {
+          "type": "string"
+        }
       }
     },
     "typography": {
       "type": "object",
       "properties": {
-        "heading_family": {"type": "string"},
-        "body_family": {"type": "string"},
-        "use_persian_digits": {"type": "boolean"}
+        "heading_family": {
+          "type": "string"
+        },
+        "body_family": {
+          "type": "string"
+        },
+        "use_persian_digits": {
+          "type": "boolean"
+        }
       }
     },
     "style": {
       "type": "object",
-      "required": ["preset"],
+      "required": [
+        "preset"
+      ],
       "properties": {
-        "preset": {"type": "string"},
-        "keywords": {"type": "array", "items": {"type": "string"}},
-        "art_direction": {"type": "string"}
+        "preset": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "art_direction": {
+          "type": "string"
+        }
       }
     },
     "rendering": {
       "type": "object",
       "properties": {
-        "mode": {"type": "string", "enum": ["auto", "art-directed", "exact-layout"]},
-        "width": {"type": "integer"},
-        "height": {"type": "integer"},
-        "output_format": {"type": "string", "enum": ["png", "jpeg", "webp"]}
+        "mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "art-directed",
+            "exact-layout"
+          ]
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "output_format": {
+          "type": "string",
+          "enum": [
+            "png",
+            "jpeg",
+            "webp"
+          ]
+        }
       }
     },
     "slides": {
@@ -73,28 +197,66 @@
       "minItems": 2,
       "items": {
         "type": "object",
-        "required": ["index", "kind", "title"],
+        "required": [
+          "index",
+          "kind",
+          "title"
+        ],
         "properties": {
-          "index": {"type": "integer"},
-          "kind": {"type": "string", "enum": ["cover", "content", "comparison", "summary", "cta"]},
-          "eyebrow": {"type": "string"},
-          "title": {"type": "string"},
-          "subtitle": {"type": "string"},
-          "portrait": {"type": "boolean"},
-          "byline": {"type": "string"},
+          "index": {
+            "type": "integer"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "cover",
+              "content",
+              "comparison",
+              "summary",
+              "cta"
+            ]
+          },
+          "eyebrow": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "portrait": {
+            "type": "boolean"
+          },
+          "byline": {
+            "type": "string"
+          },
           "cards": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "heading": {"type": "string"},
-                "icon": {"type": "string"},
-                "bullets": {"type": "array", "items": {"type": "string"}}
+                "heading": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "bullets": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
-          "summary": {"type": "string"},
-          "cta": {"type": "string"}
+          "summary": {
+            "type": "string"
+          },
+          "cta": {
+            "type": "string"
+          }
         }
       }
     }
