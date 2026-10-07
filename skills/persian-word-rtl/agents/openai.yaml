@@ -1,0 +1,6 @@
+interface:
+  display_name: "Word فارسی راست‌به‌چپ"
+  short_description: "ساخت و اصلاح Word فارسی با کنترل واقعی RTL و راست‌چین"
+  default_prompt: "با $persian-word-rtl فایل Word فارسی را با RTL واقعی و راست‌چین بساز یا اصلاح کن و ساختار و ظاهر تمام صفحات را بررسی کن."
+policy:
+  allow_implicit_invocation: true
