@@ -1,0 +1,11 @@
+{
+  "transport": "stdio",
+  "protocol": "2025-11-25",
+  "passed": true,
+  "server": {
+    "name": "torob-mcp",
+    "version": "0.1.0"
+  },
+  "tool_count": 10,
+  "suggestions_returned": 2
+}

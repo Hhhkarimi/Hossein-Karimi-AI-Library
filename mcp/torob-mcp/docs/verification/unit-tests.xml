@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="Persian/Arabic characters, digits and invisible separators normalize consistently" time="0.008984" classname="test" file="test/client.test.mjs"/>
+	<testcase name="product references are extracted without fetching arbitrary hosts" time="0.002715" classname="test" file="test/client.test.mjs"/>
+	<testcase name="input validation rejects invalid ranges, unknown fields and excessive limits" time="0.009953" classname="test" file="test/client.test.mjs"/>
+	<testcase name="identical concurrent reads coalesce, cache keeps original timestamp, TTL expires" time="0.106034" classname="test" file="test/client.test.mjs"/>
+	<testcase name="invalid upstream structure is reported and evicted from cache" time="0.015424" classname="test" file="test/client.test.mjs"/>
+	<testcase name="cache eviction respects both entry and response-byte bounds" time="0.047182" classname="test" file="test/client.test.mjs"/>
+	<testcase name="the client refuses external origins and write/redirect paths" time="0.000906" classname="test" file="test/client.test.mjs"/>
+	<testcase name="403/429 responses are not retried and pause queued requests" time="0.015060" classname="test" file="test/client.test.mjs"/>
+	<testcase name="timeouts, non-JSON responses and oversize bodies have distinct errors" time="0.062431" classname="test" file="test/client.test.mjs"/>
+	<testcase name="a transient 5xx retries once and the upstream gate serializes calls" time="0.893735" classname="test" file="test/client.test.mjs"/>
+	<testcase name="official SDK client connects over HTTP and invokes every registered tool" time="0.252568" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="HTTP supports 2025 initialization and tool errors keep a machine-readable code" time="0.010654" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="stdio transport emits parseable JSON lines and handles initialize/list/call" time="0.012597" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="Node listener rejects foreign Host/Origin, requires configured bearer and caps body size" time="0.112388" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="Worker entry requires a secret and serves metadata when configured" time="0.000880" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="search removes ads and outside-budget results, uses the observed Torob filter names" time="0.002050" classname="test" file="test/service.test.mjs"/>
+	<testcase name="uncertain search matches and unknown availability stay visible" time="0.004546" classname="test" file="test/service.test.mjs"/>
+	<testcase name="price sorting does not put missing prices ahead of actual prices" time="0.001489" classname="test" file="test/service.test.mjs"/>
+	<testcase name="seller lists are loaded, sorted and deduplicated, with shop scores separate from product ratings" time="0.026426" classname="test" file="test/service.test.mjs"/>
+	<testcase name="partial seller lists are labelled and offline contact endpoints are never fetched" time="0.001832" classname="test" file="test/service.test.mjs"/>
+	<testcase name="a seller-list URL cannot redirect the client to another origin or another product" time="0.001711" classname="test" file="test/service.test.mjs"/>
+	<testcase name="comparison returns differing specs and null for missing values" time="0.023123" classname="test" file="test/service.test.mjs"/>
+	<testcase name="batch results expose partial failures rather than replacing failed items" time="0.008057" classname="test" file="test/service.test.mjs"/>
+	<testcase name="cheapest scans bounded pages and deduplicates products" time="0.012049" classname="test" file="test/service.test.mjs"/>
+	<testcase name="filter discovery and category browsing preserve usable IDs" time="0.031994" classname="test" file="test/service.test.mjs"/>
+	<!-- tests 25 -->
+	<!-- suites 0 -->
+	<!-- pass 25 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 2515.587 -->
+</testsuites>

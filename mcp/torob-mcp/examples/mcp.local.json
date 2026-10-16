@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "torob": {
+      "command": "node",
+      "args": [
+        "C:/path/to/Hossein-Karimi-AI-Library/mcp/torob-mcp/dist/stdio.js"
+      ]
+    }
+  }
+}

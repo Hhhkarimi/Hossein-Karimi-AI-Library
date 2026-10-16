@@ -1,0 +1,31 @@
+name: Torob MCP - Build and test
+
+on:
+  push:
+    paths:
+      - 'mcp/torob-mcp/**'
+      - '.github/workflows/torob-mcp-ci.yml'
+  pull_request:
+    paths:
+      - 'mcp/torob-mcp/**'
+      - '.github/workflows/torob-mcp-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mcp/torob-mcp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: mcp/torob-mcp/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm test

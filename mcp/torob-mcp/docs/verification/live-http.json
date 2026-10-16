@@ -1,0 +1,68 @@
+{
+  "started_at": "2026-10-15T16:53:13.959Z",
+  "transport": "http",
+  "checks": [
+    {
+      "name": "handshake_and_tools",
+      "passed": true,
+      "tool_count": 10
+    },
+    {
+      "name": "search_torob",
+      "passed": true,
+      "returned": 5
+    },
+    {
+      "name": "torob_suggest",
+      "passed": true,
+      "returned": 3
+    },
+    {
+      "name": "search_filters",
+      "passed": true
+    },
+    {
+      "name": "product_details",
+      "passed": true
+    },
+    {
+      "name": "browse_category",
+      "passed": true,
+      "returned": 3
+    },
+    {
+      "name": "product_sellers",
+      "passed": true,
+      "returned": 3
+    },
+    {
+      "name": "similar_products",
+      "passed": true,
+      "returned": 3
+    },
+    {
+      "name": "get_products_batch",
+      "passed": true,
+      "returned": 2
+    },
+    {
+      "name": "compare_products",
+      "passed": true
+    },
+    {
+      "name": "find_cheapest",
+      "passed": true,
+      "returned": 3
+    },
+    {
+      "name": "invalid_product_error",
+      "passed": true
+    }
+  ],
+  "server": {
+    "name": "torob-mcp",
+    "version": "0.1.0"
+  },
+  "passed": true,
+  "finished_at": "2026-10-15T16:53:20.422Z"
+}
