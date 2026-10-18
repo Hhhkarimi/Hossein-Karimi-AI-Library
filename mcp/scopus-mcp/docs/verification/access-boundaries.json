@@ -1,0 +1,23 @@
+{
+  "checked_local_date": "2026-10-19",
+  "timezone": "Asia/Tehran",
+  "credential_configured": false,
+  "author_profile_api": {
+    "credential_sent": false,
+    "status": 401,
+    "interpretation": "Authentication failure, not evidence of an absent author"
+  },
+  "public_author_page": {
+    "state": "network_retrieval_failed",
+    "data_absence_confirmed": false
+  },
+  "public_affiliation_page": {
+    "state": "network_retrieval_failed",
+    "data_absence_confirmed": false
+  },
+  "subject_classifications": {
+    "status": 200,
+    "credential_required_for_observed_request": false
+  },
+  "profile_live_validation": "not_run_no_key"
+}

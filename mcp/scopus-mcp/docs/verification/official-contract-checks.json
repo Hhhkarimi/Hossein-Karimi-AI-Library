@@ -1,0 +1,37 @@
+{
+  "source": "Official Elsevier documentation examples, not live profiles",
+  "checks": [
+    {
+      "name": "author",
+      "passed": true
+    },
+    {
+      "name": "affiliation",
+      "passed": true
+    },
+    {
+      "name": "author_search",
+      "passed": true
+    },
+    {
+      "name": "affiliation_search",
+      "passed": true
+    },
+    {
+      "name": "document_search",
+      "passed": true
+    },
+    {
+      "name": "abstract",
+      "passed": true
+    },
+    {
+      "name": "references",
+      "passed": true
+    },
+    {
+      "name": "serial",
+      "passed": true
+    }
+  ]
+}

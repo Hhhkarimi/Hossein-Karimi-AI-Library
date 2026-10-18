@@ -1,0 +1,32 @@
+{
+  "started_at": "2026-10-18T20:52:37.659Z",
+  "source": "Scopus/Elsevier",
+  "checks": [
+    {
+      "name": "protocol_and_tools",
+      "passed": true,
+      "count": 26
+    },
+    {
+      "name": "scopus_status",
+      "passed": true
+    },
+    {
+      "name": "subject_areas",
+      "passed": true
+    },
+    {
+      "name": "build_scopus_query",
+      "passed": true
+    },
+    {
+      "name": "missing_key_is_not_missing_profile",
+      "passed": true
+    }
+  ],
+  "profile_api_validation": "not_run_no_key",
+  "data_absence_confirmed": false,
+  "note": "Protocol and the public subject endpoint passed. Researcher/university APIs were NOT live-validated; no key was configured.",
+  "passed": true,
+  "finished_at": "2026-10-18T20:52:38.749Z"
+}

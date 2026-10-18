@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "scopus": {
+      "command": "node",
+      "args": ["--env-file=C:/private/scopus.env", "C:/path/to/Hossein-Karimi-AI-Library/mcp/scopus-mcp/dist/stdio.js"]
+    }
+  }
+}

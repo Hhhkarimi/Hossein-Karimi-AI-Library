@@ -1,0 +1,32 @@
+{
+  "name": "scopus-profiles-mcp",
+  "version": "0.1.0",
+  "description": "Read-only Scopus MCP for researcher and university profiles, publications and metrics",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=24" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hhhkarimi/Hossein-Karimi-AI-Library.git",
+    "directory": "mcp/scopus-mcp"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/stdio.js",
+    "start:http": "node dist/http.js",
+    "test": "npm run build && node --test --test-isolation=none test/*.test.mjs",
+    "check": "npm test",
+    "verify:live": "node scripts/verify-live.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "@modelcontextprotocol/node": "2.1.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@types/node": "^24.0.0",
+    "typescript": "6.0.3"
+  }
+}

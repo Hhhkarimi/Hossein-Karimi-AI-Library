@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="Scopus profile references accept exact official hosts and preserve numeric strings" time="0.005986" classname="test" file="test/core.test.mjs"/>
+	<testcase name="DOI/EID/ORCID validation does not follow arbitrary URLs" time="0.001120" classname="test" file="test/core.test.mjs"/>
+	<testcase name="structured queries reject incompatible fields and protect literal query terms" time="0.007088" classname="test" file="test/core.test.mjs"/>
+	<testcase name="an unconfigured key does not trigger profile network calls or imply absent data" time="0.001773" classname="test" file="test/core.test.mjs"/>
+	<testcase name="public subject endpoint remains usable without a key, and no undefined credential is sent" time="0.016855" classname="test" file="test/core.test.mjs"/>
+	<testcase name="credentials stay in headers, never URLs, returned status or error messages" time="0.005505" classname="test" file="test/core.test.mjs"/>
+	<testcase name="upstream paths and credential query parameters are restricted" time="0.001354" classname="test" file="test/core.test.mjs"/>
+	<testcase name="identical requests coalesce; quota zero and original cache timestamp are retained" time="0.103432" classname="test" file="test/core.test.mjs"/>
+	<testcase name="401 and 403 do not retry; HTTP 429 separates weekly quota from throttling" time="0.063990" classname="test" file="test/core.test.mjs"/>
+	<testcase name="non-JSON, malformed JSON, service errors and schema changes are not empty successes" time="0.032750" classname="test" file="test/core.test.mjs"/>
+	<testcase name="timeout includes body reading and response size is bounded" time="0.045482" classname="test" file="test/core.test.mjs"/>
+	<testcase name="invalid UTF-8 is reported instead of corrupting researcher names" time="0.015781" classname="test" file="test/core.test.mjs"/>
+	<testcase name="transient server errors retry once and upstream requests remain serialized" time="0.903041" classname="test" file="test/core.test.mjs"/>
+	<testcase name="missing metrics remain not_returned while genuine zero stays reported" time="0.001687" classname="test" file="test/core.test.mjs"/>
+	<testcase name="rich affiliation data is not overwritten by a bare ID in another profile section" time="0.000375" classname="test" file="test/core.test.mjs"/>
+	<testcase name="university profile does not fabricate a ranking, h-index or citation total" time="0.001224" classname="test" file="test/core.test.mjs"/>
+	<testcase name="references support the full bibliography container and distinguish missing lists from empty lists" time="0.000727" classname="test" file="test/core.test.mjs"/>
+	<testcase name="bibliography export escapes injected lines, BibTeX characters and spreadsheet formulas" time="0.001851" classname="test" file="test/core.test.mjs"/>
+	<testcase name="official SDK client invokes all 26 tools through Streamable HTTP using synthetic data" time="0.485096" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="missing-key tool errors say access/configuration failure, never data absence" time="0.003555" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="stdio JSON framing supports 2025 initialize, listing and tool calls" time="0.016323" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="Node HTTP guards Host, Origin, bearer token and body size" time="0.109822" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="tool schemas reject unknown fields, excessive counts, duplicate-only comparisons and long trends" time="0.039433" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="AUTO author profile tries official lower views only after a 403 and discloses every attempt" time="0.017660" classname="test" file="test/service.test.mjs"/>
+	<testcase name="explicit views never silently downgrade after access denial" time="0.008577" classname="test" file="test/service.test.mjs"/>
+	<testcase name="AUTO profile fills missing metrics from METRICS with a separate timestamp observation" time="0.017156" classname="test" file="test/service.test.mjs"/>
+	<testcase name="a denied metric view keeps successful profile data and never labels the metric absent" time="0.029279" classname="test" file="test/service.test.mjs"/>
+	<testcase name="a different resolved ID cannot be silently merged across author views" time="0.031012" classname="test" file="test/service.test.mjs"/>
+	<testcase name="authentication errors do not trigger repeated profile view probes" time="0.016033" classname="test" file="test/service.test.mjs"/>
+	<testcase name="coauthors use the documented co-author parameter and no inferred publication sample" time="0.016096" classname="test" file="test/service.test.mjs"/>
+	<testcase name="affiliation authors retain historical-membership scope" time="0.001501" classname="test" file="test/service.test.mjs"/>
+	<testcase name="affiliation AUTO can read LIGHT after STANDARD access denial" time="0.029581" classname="test" file="test/service.test.mjs"/>
+	<testcase name="profile batches expose restricted/unattempted records instead of empty profiles" time="0.047421" classname="test" file="test/service.test.mjs"/>
+	<testcase name="comparisons deduplicate IDs and preserve partial-success profiles" time="0.015387" classname="test" file="test/service.test.mjs"/>
+	<testcase name="annual trends use full search totals and the date parameter, not page length" time="0.031026" classname="test" file="test/service.test.mjs"/>
+	<testcase name="restricted annual counts remain unknown rather than zero" time="0.015001" classname="test" file="test/service.test.mjs"/>
+	<testcase name="the Scopus empty-result sentinel is accepted only when total=0" time="0.030728" classname="test" file="test/service.test.mjs"/>
+	<testcase name="singleton author search entries and clamped pages remain explicit" time="0.015591" classname="test" file="test/service.test.mjs"/>
+	<testcase name="next offset uses the official next-link start rather than skipping a capped page" time="0.015073" classname="test" file="test/service.test.mjs"/>
+	<testcase name="cursor pagination preserves opaque cursor tokens and rejects conflicting offsets" time="0.001392" classname="test" file="test/service.test.mjs"/>
+	<testcase name="API embedded errors and ambiguous retrieval arrays are never read as a valid profile" time="0.029116" classname="test" file="test/service.test.mjs"/>
+	<testcase name="Scopus reference and cited-by routes encode identifiers and direction explicitly" time="0.031559" classname="test" file="test/service.test.mjs"/>
+	<testcase name="journal metric years remain the provider-reported years" time="0.015391" classname="test" file="test/service.test.mjs"/>
+	<!-- tests 43 -->
+	<!-- suites 0 -->
+	<!-- pass 43 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 2926.3647 -->
+</testsuites>
