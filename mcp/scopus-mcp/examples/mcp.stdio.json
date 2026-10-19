@@ -2,7 +2,8 @@
   "mcpServers": {
     "scopus": {
       "command": "node",
-      "args": ["--env-file=C:/private/scopus.env", "C:/path/to/Hossein-Karimi-AI-Library/mcp/scopus-mcp/dist/stdio.js"]
+      "args": ["C:/path/to/Hossein-Karimi-AI-Library/mcp/scopus-mcp/dist/stdio.js"],
+      "env": { "SCOPUS_EXPORT_DIR": "C:/path/to/scopus-exports" }
     }
   }
 }

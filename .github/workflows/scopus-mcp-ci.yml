@@ -1,19 +1,12 @@
 name: Scopus MCP - Build and test
-
 on:
   push:
-    paths:
-      - 'mcp/scopus-mcp/**'
-      - '.github/workflows/scopus-mcp-ci.yml'
+    paths: ['mcp/scopus-mcp/**', '.github/workflows/scopus-mcp-ci.yml']
   pull_request:
-    paths:
-      - 'mcp/scopus-mcp/**'
-      - '.github/workflows/scopus-mcp-ci.yml'
+    paths: ['mcp/scopus-mcp/**', '.github/workflows/scopus-mcp-ci.yml']
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -28,4 +21,7 @@ jobs:
           cache: npm
           cache-dependency-path: mcp/scopus-mcp/package-lock.json
       - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps chromium
       - run: npm test
+        env:
+          RUN_BROWSER_TESTS: '1'

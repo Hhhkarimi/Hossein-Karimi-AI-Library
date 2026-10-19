@@ -30,3 +30,10 @@ No authorized Elsevier key was configured in the build environment. Anonymous Au
 The server exposes a selected, bounded set of documented Scopus workflows. Citation Overview, SciVal analytics, institutional rankings, account management, profile corrections, bulk mirroring and subscription full-text retrieval are not implemented. A comprehensive tool list does not imply coverage of every Elsevier product or unrestricted access to all Scopus fields.
 
 No network data is silently drawn from a different research database. Alternate official views are attempted only with the user's own configured API credentials and are disclosed. The application does not request purchases or invoke billable external scraping services. Running code has no software license fee; upstream data entitlement and any hosting costs remain separate.
+# Public Preview and XLSX (0.2.0)
+
+- [Elsevier Author Profile FAQs](https://www.elsevier.support/scopus/answer/scopus-author-profile-faqs): non-subscribers see the first 10 documents and limited metadata.
+- [Author Search](https://www.elsevier.support/scopus/answer/how-do-i-work-with-author-search-results): last name, first name and affiliation inputs; author identity candidates.
+- [Author details](https://www.elsevier.support/scopus/answer/what-can-i-do-on-an-author-details-page): author Documents tab and export behavior.
+- [ExcelJS](https://github.com/exceljs/exceljs) and [Playwright](https://playwright.dev/docs/api/class-browser): open-source runtime XLSX writer and browser. The public browser adapter reads visible DOM only, not private endpoints. Live DOM compatibility has not been established here.
+

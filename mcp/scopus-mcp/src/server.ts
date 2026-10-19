@@ -1,4 +1,4 @@
-import { McpServer } from '@modelcontextprotocol/server';
+import { McpServer, ResourceTemplate } from '@modelcontextprotocol/server';
 import * as z from 'zod/v4';
 import { affiliationSort, affiliationView, authorSort, buildQueryInput, count, documentRefInput,
   documentSearchInput, documentSort, documentType, offset, profileView, query, reference } from './contracts.js';
@@ -7,16 +7,25 @@ import { formatDocuments } from './export.js';
 import { numericId } from './identifiers.js';
 import { buildQuery } from './query.js';
 import { ScopusService } from './service.js';
-export const VERSION = '0.1.0';
-export const TOOL_NAMES = ['scopus_status', 'check_scopus_access', 'build_scopus_query', 'search_authors',
+import { ExportStore, exportAuthorPublications, XLSX_MIME, type PublicSource } from './author-export.js';
+import { configuredPublicSource } from './public-scopus.js';
+export const VERSION = '0.2.0';
+export const TOOL_NAMES = ['export_author_publications', 'scopus_status', 'check_scopus_access', 'build_scopus_query', 'search_authors',
   'author_profile', 'author_metrics', 'author_affiliations', 'author_documents', 'author_coauthors',
   'author_citing_documents', 'search_affiliations', 'affiliation_profile', 'affiliation_authors',
   'affiliation_documents', 'compare_authors', 'compare_affiliations', 'get_profiles_batch',
   'publication_trend', 'search_documents', 'document_details', 'document_references',
   'document_citing', 'search_facets', 'search_journals', 'subject_areas', 'export_documents'] as const;
-export function createServer(service = new ScopusService()) {
+export type ExportOptions = { publicSource?: PublicSource; exportStore?: ExportStore; downloadBaseUrl?: string };
+export function createServer(service = new ScopusService(), options: ExportOptions = {}) {
+  const publicSource = options.publicSource ?? configuredPublicSource();
+  const exports = options.exportStore ?? new ExportStore();
   const server = new McpServer({ name: 'scopus-profiles-mcp', version: VERSION }, {
-    instructions: 'Read-only Scopus data from official Elsevier APIs. Software is MIT/free; data access requires appropriate Elsevier authorization. '
+    instructions: 'Scopus data from public Scopus Preview or optional official Elsevier APIs. '
+      + 'For a person name plus university and Excel request, call export_author_publications in public mode (default); no API key. '
+      + 'Show the returned downloadable XLSX link/local_path to the user. Resolve needs_author_selection by asking for the correct candidate; never guess. '
+      + 'Public Preview generally exposes only the first 10 publications; preserve complete, coverage, warnings. Never call a partial export all publications. '
+      + 'Other profile/search API tools require appropriate Elsevier authorization. '
       + 'Never substitute other databases or guess Scopus metrics. A missing field, denied request or unconfigured key does not mean the data does not exist. '
       + 'Always preserve metric_status, source, timestamps and per-view observations. Zero and not_returned are different. '
       + 'Use IDs to disambiguate names; historical affiliation matches are not current employees. Citation counts and citing-document counts differ. '
@@ -30,9 +39,39 @@ export function createServer(service = new ScopusService()) {
       return { isError: true, content: [{ type: 'text' as const, text: JSON.stringify({ error: detail, data_absence_confirmed: false }) }] };
     }
   };
+  server.registerResource('scopus-excel', new ResourceTemplate('scopus-export:///{id}', { list: undefined }),
+    { title: 'Generated Scopus Excel workbook', mimeType: XLSX_MIME }, async (uri, variables) => {
+      const id = String(variables.id), file = exports.get(id);
+      if (!file) throw new ScopusError('EXPORT_EXPIRED', 'Export expired or belongs to another server instance. Generate it again.');
+      return { contents: [{ uri: uri.href, mimeType: XLSX_MIME, blob: file.bytes.toString('base64') }] };
+    });
+  server.registerTool('export_author_publications', { title: 'نام و دانشگاه → Excel مقالات Scopus',
+    description: 'Give a researcher full name and university to find Scopus author candidates, retrieve accessible publications, and create a real downloadable .xlsx. '
+      + 'Default public mode uses the Scopus website without an API key/account; Preview is usually limited to the first 10 papers. '
+      + 'Returns candidates for ambiguous names. Call again with author ID after selection. family_name/given_name handle compound surnames; use Latin spelling as indexed. '
+      + 'The university disambiguates the person, not the publication scope. Show download_url/local_path, complete and warnings. '
+      + 'Optional api mode requires configured Elsevier access and paginates up to max_documents. No other database is relabeled Scopus.',
+    inputSchema: z.strictObject({ name: z.string().trim().min(2).max(200), university: z.string().trim().min(2).max(200),
+      family_name: z.string().trim().min(1).max(150).optional(), given_name: z.string().trim().min(1).max(150).optional(),
+      author: reference.optional(), mode: z.enum(['public', 'api']).default('public'),
+      max_documents: z.number().int().min(1).max(1000).default(1000) }),
+    annotations: { ...annotations, readOnlyHint: false, idempotentHint: false } }, async input => {
+      const result = await wrap(() => exportAuthorPublications(input, service, publicSource, exports));
+      const data = 'structuredContent' in result ? result.structuredContent : undefined;
+      if (data?.status === 'exported') {
+        if (options.downloadBaseUrl) data.download_url = `${options.downloadBaseUrl}/exports/${data.id}`;
+        result.content[0]!.text = JSON.stringify(data);
+        return { ...result, content: [...result.content, { type: 'resource_link' as const, uri: String(data.resource_uri),
+          name: String(data.filename), mimeType: XLSX_MIME, size: Number(data.size) }] };
+      }
+      return result;
+    });
   server.registerTool('scopus_status', { title: 'Scopus configuration and quota',
     description: 'No network. Show credential configuration flags and observed per-API quota. Never returns secrets; configuration is not proof of entitlement.',
-    inputSchema: z.strictObject({}), annotations }, () => wrap(() => service.status()));
+    inputSchema: z.strictObject({}), annotations }, () => wrap(() => ({ ...service.status(),
+      excel_export: { tool: 'export_author_publications', default_mode: 'public', api_key_required: false,
+        coverage: 'Only documents visible in Scopus Preview; usually the first 10.',
+        browser_validation: 'Not checked by this status tool.' } })));
   server.registerTool('check_scopus_access', { title: 'Check Scopus API access',
     description: 'Probe selected search APIs using one small real request each. Success proves only that API/request, not all profile views. Errors do not establish missing data.',
     inputSchema: z.strictObject({ apis: z.array(z.enum(['authors', 'affiliations', 'documents'])).min(1).max(3).default(['authors', 'affiliations', 'documents']) }), annotations },

@@ -7,7 +7,7 @@ import { configuredService } from '../dist/config.js';
 import { TOOL_NAMES } from '../dist/server.js';
 const report = { started_at: new Date().toISOString(), source: 'Scopus/Elsevier', checks: [],
   profile_api_validation: 'not_run', data_absence_confirmed: false };
-const client = new Client({ name: 'scopus-live-verifier', version: '0.1.0' });
+const client = new Client({ name: 'scopus-live-verifier', version: '0.2.0' });
 let app;
 try {
   let transport;

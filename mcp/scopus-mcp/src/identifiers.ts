@@ -10,6 +10,8 @@ export function profileId(value: string, kind: 'author' | 'affiliation'): string
     const url = new URL(value);
     if (url.protocol !== 'https:' || !['www.scopus.com', 'scopus.com'].includes(url.hostname) ||
       url.port || url.username || url.password) throw new Error();
+    const modern = (kind === 'author' ? /^\/pages\/author\/(\d{1,20})\/?$/ : /^\/pages\/affiliation\/(\d{1,20})\/?$/).exec(url.pathname);
+    if (modern) return numericId(modern[1]!, kind);
     const permitted = kind === 'author' ? /^\/authid\/detail\.(uri|url)$/ : /^\/affil\/profile\.(uri|url)$/;
     if (!permitted.test(url.pathname)) throw new Error();
     return numericId(url.searchParams.get(kind === 'author' ? 'authorId' : 'afid') ?? '', kind);

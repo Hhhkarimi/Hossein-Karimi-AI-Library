@@ -1,6 +1,6 @@
 # Tool reference
 
-All network records come from Scopus/Elsevier. The server is read-only. Software is free under MIT; access rights to data/views are separate. Credentials are configured through environment variables, never tool arguments.
+All network records come from Scopus/Elsevier. Scopus data is read-only; the Excel tool creates local/export artifacts. Public Excel mode needs no credentials. Optional API credentials are configured through environment variables, never tool arguments. Software is free under MIT; access rights to data/views are separate.
 
 ## Common parameters and response states
 
@@ -11,7 +11,17 @@ All network records come from Scopus/Elsevier. The server is read-only. Software
 - Missing provider data is `null`/`not_returned`, never an invented zero. Errors are MCP `isError: true` with text JSON `{error:{code,message,retry_after_seconds?},data_absence_confirmed:false}`. SDK argument rejection can be a protocol invalid-params error instead.
 - Some composite/batch calls succeed partially. Always inspect `ok`, `complete`, `comparison_complete`, `errors` and view attempts before presenting a complete result.
 
-## Profiles
+## Name + university to Excel (no key by default)
+
+`export_author_publications` accepts required `name`, `university`; optional `family_name`, `given_name`, `author` (Scopus ID or old/new profile URL), `mode=public|api` (default public), `max_documents=1..1000` (default 1000).
+
+Public mode uses a normal anonymous Playwright browser on Scopus Preview, without API credentials. Only verified publication links in the author Documents section are exported. No unrelated recommended or citing papers are included. Public metadata is limited; blank cells do not mean nonexistent data. Elsevier limits the non-subscriber profile to the first 10 publications. No pagination/access bypass is attempted. Public page compatibility has not yet been verified against a live accessible Scopus page in this build environment.
+
+Ambiguous names return `status=needs_author_selection` with candidates and no workbook; select an ID and call again with `author`. `no_search_match` means the query had no recognized matches, not no publications. A block/unrecognized layout is an MCP error with `data_absence_confirmed=false`. A successful workbook returns `status=exported`, `exported`, `reported_total` (nullable), `complete`, `coverage`, `warnings`, `filename`, `mime_type`, `resource_uri`, and a resource_link content item. Use `resources/read` to obtain the base64 XLSX blob. HTTP also returns `download_url` (same auth as MCP); stdio/CLI return `local_path`/`file_uri`. Local files persist; in-memory resources expire after one hour, restart, or eviction beyond 20 files.
+
+The file is actual XLSX, with Publications and Coverage sheets, filters, frozen header, literal text cells and numeric citations when reported. This tool is annotated as a local write, not read-only. API mode is explicitly opt-in, uses AU-ID across all affiliations, deduplicates and paginates up to 1000 papers / 35 seconds; partial coverage is disclosed. It requires configured Elsevier credentials. The old `export_documents` remains a text bibliography tool.
+
+## Profiles (optional authorized API)
 
 | Tool | Parameters | Result/behavior |
 |---|---|---|

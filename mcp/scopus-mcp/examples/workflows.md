@@ -1,3 +1,9 @@
+# Excel without an API key
+
+Call `export_author_publications` with `name` and `university` (Latin spelling as indexed). Leave mode unspecified: public Preview is the default. If it returns candidate profiles, select the correct one and repeat with `author` set to its ID. Show the returned XLSX download/local file link to the user, together with exported count and complete/coverage/warnings. Do not promise all papers: non-subscribers generally see only the first 10. This route has synthetic browser tests; live page compatibility remains unverified in the build environment.
+
+An API key is unnecessary for this workflow. The workflows below use optional API tools and their credentials/entitlements.
+
 # گردش‌کارهای نمونه
 
 ## پیدا کردن پژوهشگر

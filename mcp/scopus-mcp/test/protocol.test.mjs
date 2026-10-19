@@ -24,8 +24,9 @@ const inputs = {
   document_references: { identifier: DOC_A }, document_citing: { eid: `2-s2.0-${DOC_A}` },
   search_facets: { query: 'TITLE(test)' }, search_journals: { title: 'Synthetic' }, subject_areas: {},
   export_documents: { scopus_ids: [DOC_A], format: 'bibtex' },
+  export_author_publications: { name: 'Ada Example', university: 'Example University', author: AUTHOR_A, mode: 'api', max_documents: 1 },
 };
-test('official SDK client invokes all 26 tools through Streamable HTTP using synthetic data', async () => {
+test('official SDK client invokes all 27 tools through Streamable HTTP using synthetic data', async () => {
   const endpoint = createEndpoint({ service: fixtureService().service });
   const client = new Client({ name: 'test-client', version: '1' });
   try {
@@ -33,7 +34,7 @@ test('official SDK client invokes all 26 tools through Streamable HTTP using syn
       fetch: (input, init) => endpoint.fetch(new Request(input, init)),
     }));
     const tools = await client.listTools(); assert.deepEqual(tools.tools.map(t => t.name), [...TOOL_NAMES]);
-    assert.equal(tools.tools.length, 26); assert.ok(tools.tools.every(t => t.annotations.readOnlyHint));
+    assert.equal(tools.tools.length, 27); assert.ok(tools.tools.filter(t => t.name !== 'export_author_publications').every(t => t.annotations.readOnlyHint));
     for (const [name, args] of Object.entries(inputs)) {
       const result = await client.callTool({ name, arguments: args });
       assert.ok(!result.isError, `${name}: ${JSON.stringify(result)}`); assert.ok(result.structuredContent);
@@ -66,7 +67,7 @@ test('stdio JSON framing supports 2025 initialize, listing and tool calls', asyn
     const init = await send({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 'test', version: '1' } } });
     assert.equal(init.result.serverInfo.name, 'scopus-profiles-mcp');
     input.write('{"jsonrpc":"2.0","method":"notifications/initialized"}\n');
-    assert.equal((await send({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} })).result.tools.length, 26);
+    assert.equal((await send({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} })).result.tools.length, 27);
     const call = await send({ jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'author_profile', arguments: { author: AUTHOR_A } } });
     assert.equal(call.result.structuredContent.metrics.h_index, 8);
   } finally { await handle.close(); input.destroy(); output.destroy(); }
