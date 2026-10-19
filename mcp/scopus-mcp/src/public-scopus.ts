@@ -21,7 +21,7 @@ export function parsePublicSnapshot(snapshot: PublicSnapshot, kind: 'authors' | 
       else id = /^\/pages\/publications\/(\d{1,20})\/?$/.exec(url.pathname)?.[1]
         ?? (/^\/record\/display\.uri$/.test(url.pathname) ? /^2-s2\.0-(\d{1,20})$/.exec(url.searchParams.get('eid') ?? '')?.[1] : undefined);
       const title = link.title.replace(/\s+/g, ' ').trim();
-      if (!id || !/^\d{1,20}$/.test(id) || title.length < 3 || /^(show|view|details|profile|documents|[\d,]+)\b/i.test(title)) continue;
+      if (!id || !/^\d{1,20}$/.test(id) || title.length < 3 || /^(?:show (?:details|documents)|view (?:details|profile|documents)|details|profile|documents|[\d,]+)$/i.test(title)) continue;
       rows.push({ id, title, url: kind === 'authors' ? `https://www.scopus.com/pages/author/${id}` : `https://www.scopus.com/pages/publications/${id}`,
         context: link.context, doi: link.doi });
     } catch (error) { if (error instanceof ScopusError) throw error; }
@@ -66,6 +66,7 @@ export class PublicScopusSource implements PublicSource {
         }
       } catch (error) {
         if (error instanceof Error && /spawn EPERM|permission denied/i.test(error.message)) throw new ScopusError('BROWSER_EXECUTION_DENIED', 'This runtime denied permission to start the browser. Run on a host that permits browser processes. This is not missing Scopus data and does not require an API key.');
+        if (error instanceof Error && /sandboxing failed|no usable sandbox/i.test(error.message)) throw new ScopusError('BROWSER_SANDBOX_UNAVAILABLE', 'The OS blocked the Chromium sandbox. Configure sandbox support on this host. See SCOPUS_BROWSER_SANDBOX in the deployment documentation. This is not missing Scopus data.');
         throw new ScopusError('BROWSER_UNAVAILABLE', 'The browser could not start. Install Chromium with: npx playwright install chromium and set SCOPUS_BROWSER_CHANNEL=chromium, or select an installed msedge/chrome channel. No API key is needed.');
       }
       const page = await context.newPage(); page.setDefaultTimeout(12000); page.setDefaultNavigationTimeout(15000);
@@ -92,9 +93,9 @@ export class PublicScopusSource implements PublicSource {
     return this.withPage(async page => {
       await this.open(page, 'https://www.scopus.com/freelookup/form/author.uri');
       const name = splitName(input.name, input.family_name, input.given_name);
-      await page.getByRole('textbox', { name: /last name|surname/i }).first().fill(name.family);
-      if (name.given) await page.getByRole('textbox', { name: /first name|given name/i }).first().fill(name.given);
-      await page.getByRole('textbox', { name: /affiliation|organization|organisation/i }).first().fill(input.university);
+      await page.getByRole('textbox', { name: /last name|surname/i }).or(page.getByPlaceholder(/last name|surname/i)).first().fill(name.family);
+      if (name.given) await page.getByRole('textbox', { name: /first name|given name/i }).or(page.getByPlaceholder(/first name|given name/i)).first().fill(name.given);
+      await page.getByRole('textbox', { name: /affiliation|organization|organisation/i }).or(page.getByPlaceholder(/affiliation|organization|organisation/i)).first().fill(input.university);
       await page.getByRole('button', { name: /^search$/i }).first().click();
       await page.waitForFunction(() => !!document.querySelector('a[href*="/pages/author/"],a[href*="/authid/detail"]') || /no (?:authors|results)|0 authors|captcha|access denied|verify.*human/i.test(document.body.innerText));
       const data = await snapshot(page), rows = parsePublicSnapshot(data, 'authors');
