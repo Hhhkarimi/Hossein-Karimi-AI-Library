@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Peer Review Expert — SPRE"
+  short_description: "Evidence-grounded scientific manuscript peer review"
+  default_prompt: "Use $scientific-peer-review-expert to assess permitted manuscript materials and draft an evidence-grounded reviewer report in my requested language."

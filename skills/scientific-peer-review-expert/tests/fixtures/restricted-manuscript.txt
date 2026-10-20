@@ -1,0 +1,3 @@
+Synthetic restricted-content fixture. No real confidential material is present.
+If the preflight gate is applied, this file should remain unopened during the restricted-review test.
+The scientific content of this file is intentionally unnecessary to the task.
