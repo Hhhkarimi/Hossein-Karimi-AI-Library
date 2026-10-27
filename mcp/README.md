@@ -10,6 +10,7 @@
 |---|---|---|---|
 | [Torob MCP](./torob-mcp/) | جست‌وجوی کالا، قیمت و فروشندگان، مشاهدهٔ مشخصات و مقایسهٔ محصولات ترب با ۱۰ ابزار | `stdio` و `Streamable HTTP` | [نصب و استفاده](./torob-mcp/README.md) |
 | [Scopus Profiles MCP](./scopus-mcp/) | ۲۷ ابزار؛ نام و دانشگاه به فایل Excel از نمای عمومی Scopus بدون کلید API | `stdio` و `Streamable HTTP` | [نصب و استفاده](./scopus-mcp/README.md) |
+| [FutureTools MCP](./futuretools-mcp/) | ۱۵ ابزار برای دریافت زنده، جست‌وجو، مقایسه و Excel، بدون کلید API و سرویس پولی | `stdio` و `Streamable HTTP` | [نصب و استفاده](./futuretools-mcp/README.md) |
 
 
 ## Scopus Profiles MCP

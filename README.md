@@ -55,6 +55,7 @@
 |---|---|---|
 | [Torob MCP](./mcp/torob-mcp/) | ۱۰ ابزار برای جست‌وجو، قیمت، فروشندگان و مقایسهٔ محصولات ترب؛ اتصال stdio و HTTP | [نصب و استفاده](./mcp/torob-mcp/README.md) |
 | [Scopus Profiles MCP](./mcp/scopus-mcp/) | ۲۷ ابزار؛ نام و دانشگاه به Excel از نمای عمومی بدون کلید API، همراه با ابزارهای اختیاری API | [نصب و استفاده](./mcp/scopus-mcp/README.md) |
+| [FutureTools MCP](./mcp/futuretools-mcp/) | ۱۵ ابزار با دریافت زندهٔ رایگان و بدون کلید: جست‌وجو، فیلتر، جزئیات، مقایسه و Excel | [نصب و استفاده](./mcp/futuretools-mcp/README.md) |
 
 
 ## ساختار مخزن

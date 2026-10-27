@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "futuretools": {
+      "command": "node",
+      "args": ["C:/path/to/Hossein-Karimi-AI-Library/mcp/futuretools-mcp/dist/stdio.js"],
+      "env": { "FUTURETOOLS_EXPORT_DIR": "C:/path/to/futuretools-exports" }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "started_at": "2026-10-26T20:22:11.406Z",
+  "source": "FutureTools public website",
+  "api_key_required": false,
+  "paid_services_required": false,
+  "transport": "Real localhost HTTP listener and official MCP client",
+  "checks": [
+    {
+      "name": "tool_discovery",
+      "count": 15,
+      "passed": true
+    },
+    {
+      "name": "futuretools_status",
+      "passed": true
+    },
+    {
+      "name": "check_access",
+      "passed": true,
+      "returned": 24
+    },
+    {
+      "name": "list_categories",
+      "passed": true,
+      "count": 29
+    },
+    {
+      "name": "search_tools",
+      "passed": true,
+      "returned": 24
+    },
+    {
+      "name": "search_tools",
+      "passed": true,
+      "returned": 24
+    },
+    {
+      "name": "get_tool",
+      "passed": true
+    },
+    {
+      "name": "get_tools_batch",
+      "passed": true
+    },
+    {
+      "name": "category_tools",
+      "passed": true,
+      "returned": 24
+    },
+    {
+      "name": "latest_tools",
+      "passed": true,
+      "returned": 24
+    },
+    {
+      "name": "popular_tools",
+      "passed": true,
+      "returned": 24
+    },
+    {
+      "name": "free_tools",
+      "passed": true,
+      "returned": 24
+    },
+    {
+      "name": "open_source_tools",
+      "passed": true,
+      "returned": 7
+    },
+    {
+      "name": "editors_picks",
+      "passed": true,
+      "returned": 14
+    },
+    {
+      "name": "compare_tools",
+      "passed": true
+    },
+    {
+      "name": "find_alternatives",
+      "passed": true,
+      "returned": 5
+    },
+    {
+      "name": "export_tools",
+      "passed": true
+    },
+    {
+      "name": "real_source_to_xlsx_download_and_resource",
+      "passed": true,
+      "exported": 24,
+      "bytes": 11431,
+      "entire_query_complete": false
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-10-26T20:22:21.851Z"
+}

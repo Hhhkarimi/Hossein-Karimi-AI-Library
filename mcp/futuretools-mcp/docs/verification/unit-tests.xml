@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="tool references allow exact directory hosts and reject arbitrary URLs, ports and credentials" time="0.020394" classname="test" file="test/core.test.mjs"/>
+	<testcase name="query construction encodes literal text and uses only observed public parameters" time="0.021875" classname="test" file="test/core.test.mjs"/>
+	<testcase name="public render data preserves genuine zero, false, Unicode and category names" time="0.083681" classname="test" file="test/core.test.mjs"/>
+	<testcase name="unrelated recommendations and ads are excluded from the result list" time="0.016004" classname="test" file="test/core.test.mjs"/>
+	<testcase name="a valid empty page differs from a broken layout or blocked response" time="0.018405" classname="test" file="test/core.test.mjs"/>
+	<testcase name="ignored filters are detected instead of mislabeled as applied" time="0.016594" classname="test" file="test/core.test.mjs"/>
+	<testcase name="page scripts are parsed only as JSON and are never executed" time="0.007711" classname="test" file="test/core.test.mjs"/>
+	<testcase name="detail metadata preserves reported API/no-open-source and not-returned dates" time="0.016082" classname="test" file="test/core.test.mjs"/>
+	<testcase name="detail identity changes and missing application metadata fail explicitly" time="0.008085" classname="test" file="test/core.test.mjs"/>
+	<testcase name="identical concurrent reads coalesce; cache preserves original fetch timestamp" time="0.031517" classname="test" file="test/core.test.mjs"/>
+	<testcase name="requests use no credentials and do not fetch vendor, tracking or private API URLs" time="0.006677" classname="test" file="test/core.test.mjs"/>
+	<testcase name="HTTP 401 is an explicit error, never an empty catalog or a retry flood" time="0.003707" classname="test" file="test/core.test.mjs"/>
+	<testcase name="HTTP 403 is an explicit error, never an empty catalog or a retry flood" time="0.001005" classname="test" file="test/core.test.mjs"/>
+	<testcase name="HTTP 404 is an explicit error, never an empty catalog or a retry flood" time="0.001344" classname="test" file="test/core.test.mjs"/>
+	<testcase name="HTTP 500 is an explicit error, never an empty catalog or a retry flood" time="0.001646" classname="test" file="test/core.test.mjs"/>
+	<testcase name="429 cooldown prevents a second upstream request and exposes retry delay" time="0.001844" classname="test" file="test/core.test.mjs"/>
+	<testcase name="cross-origin redirect is rejected before another fetch; same-origin tool redirects are bounded" time="0.012825" classname="test" file="test/core.test.mjs"/>
+	<testcase name="unexpected MIME, invalid UTF-8 and oversized bodies are not silently parsed" time="0.007114" classname="test" file="test/core.test.mjs"/>
+	<testcase name="network failures are sanitized and do not leak upstream exception text" time="0.000803" classname="test" file="test/core.test.mjs"/>
+	<testcase name="timeout covers response body consumption" time="0.025482" classname="test" file="test/core.test.mjs"/>
+	<testcase name="real XLSX round-trips Unicode, literal formula-like text, numeric zero and coverage" time="0.323722" classname="test" file="test/export.test.mjs"/>
+	<testcase name="CSV protects whitespace-prefixed formulas and preserves quotes and newlines" time="0.000786" classname="test" file="test/export.test.mjs"/>
+	<testcase name="CSV and JSON exports retain source URLs and timestamps" time="0.006497" classname="test" file="test/export.test.mjs"/>
+	<testcase name="local artifacts are real files in the configured directory; resource expiry is explicit" time="0.074518" classname="test" file="test/export.test.mjs"/>
+	<testcase name="official SDK client invokes all 15 tools through Streamable HTTP" time="0.679677" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="download and resources/read return identical XLSX bytes under the same bearer/Origin rules" time="0.135164" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="invalid exports and unknown or excessive arguments are rejected" time="0.104037" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="access errors retain data_absence_confirmed=false through MCP" time="0.027540" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="legacy stdio framing supports initialize, 15 tools, and real tool calls" time="0.041532" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="real Node HTTP server enforces Host, bearer, Origin and body size" time="0.181778" classname="test" file="test/protocol.test.mjs"/>
+	<testcase name="search passes category, pricing, sort and page to the actual directory URL" time="0.003565" classname="test" file="test/service.test.mjs"/>
+	<testcase name="taxonomy uses the source category labels, not derived guesses" time="0.002399" classname="test" file="test/service.test.mjs"/>
+	<testcase name="server clamping to page one is detected" time="0.002951" classname="test" file="test/service.test.mjs"/>
+	<testcase name="batch deduplicates references and retains partial 404 failures" time="0.004003" classname="test" file="test/service.test.mjs"/>
+	<testcase name="blocked batch stops new reads and marks later records unattempted" time="0.000995" classname="test" file="test/service.test.mjs"/>
+	<testcase name="comparison requires distinct tools and preserves source facts, not a fabricated ranking" time="0.012093" classname="test" file="test/service.test.mjs"/>
+	<testcase name="alternatives resolve the exact seed card category and exclude the seed" time="0.020727" classname="test" file="test/service.test.mjs"/>
+	<testcase name="alternatives do not guess a category when the exact seed is absent from search" time="0.005761" classname="test" file="test/service.test.mjs"/>
+	<testcase name="bounded collection paginates without claiming the full query" time="0.008815" classname="test" file="test/service.test.mjs"/>
+	<testcase name="two-page collection retrieves all unique records and verifies complete query coverage" time="0.019926" classname="test" file="test/service.test.mjs"/>
+	<testcase name="later-page failure preserves earlier records and discloses incomplete selection" time="0.007967" classname="test" file="test/service.test.mjs"/>
+	<testcase name="selected-reference exports have distinct selection coverage and preserve real details" time="0.003486" classname="test" file="test/service.test.mjs"/>
+	<!-- tests 42 -->
+	<!-- suites 0 -->
+	<!-- pass 42 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 5367.1847 -->
+</testsuites>

@@ -1,0 +1,12 @@
+{
+  "name": "futuretools-mcp",
+  "version": "0.1.0",
+  "description": "Free live FutureTools MCP: public web search, filters, details, comparisons and Excel exports; no API key",
+  "type": "module", "private": true, "license": "MIT",
+  "engines": { "node": ">=24" },
+  "repository": { "type": "git", "url": "git+https://github.com/Hhhkarimi/Hossein-Karimi-AI-Library.git", "directory": "mcp/futuretools-mcp" },
+  "scripts": { "build": "tsc -p tsconfig.json", "start": "node dist/stdio.js", "start:http": "node dist/http.js", "test": "npm run build && node --test --test-isolation=none test/*.test.mjs", "check": "npm test", "verify:live": "node scripts/verify-live.mjs" },
+  "dependencies": { "@modelcontextprotocol/server": "2.4.0", "@modelcontextprotocol/node": "2.1.2", "zod": "4.6.7", "cheerio": "1.2.0", "exceljs": "4.4.0" },
+  "devDependencies": { "@modelcontextprotocol/client": "2.4.0", "@types/node": "^24.0.0", "typescript": "6.0.3" },
+  "overrides": { "exceljs": { "uuid": "11.1.1" } }
+}
