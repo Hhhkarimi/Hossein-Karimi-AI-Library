@@ -1,0 +1,6 @@
+interface:
+  display_name: "رسم‌الخط رسمی فارسی"
+  short_description: "اصلاح املای فارسی طبق دستور خط فرهنگستان"
+  default_prompt: "با $persian-official-orthography متن زیر را مطابق دستور خط فارسی فرهنگستان اصلاح کن و فقط متن اصلاح‌شده را برگردان."
+policy:
+  allow_implicit_invocation: true

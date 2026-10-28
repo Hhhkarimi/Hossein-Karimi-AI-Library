@@ -1,0 +1,411 @@
+{
+  "fixture_count": 57,
+  "executed": 57,
+  "passed": 57,
+  "failed": 0,
+  "missing": [],
+  "full_coverage": true,
+  "idempotence_checked": 57,
+  "success": true,
+  "checks": [
+    {
+      "id": "unicode-fa",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "mi",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "wine",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "ezafe-y",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "ezafe-space",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "indefinite",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "h-pronounced",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "hamza",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "hamza-preserve",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "two-y",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "plural-permitted",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "plural-preferred",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "plural-he",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "plural-foreign",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "comparative",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "comparative-exceptions",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "ham-new",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "ham-exception",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "bi",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "bi-preposition",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "be-verb",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "be-adverb",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "lvc",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "derived",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "closed-ke",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "open-ke",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "emphatic-ke",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "har-person",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "har-free",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "hich",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "house-pronoun",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "ship-pronoun",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "radio-pronoun",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "numbers-protected",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "url",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "code",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "registered-name",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "historic-quote",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "arabic",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "variants",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "preferred-general",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "homophone-meaning",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "proper-meaning",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "ezafe-compound",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "free-ezafe",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "future-prefix",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "prep-two",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "prep-three",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "tanvin",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "colloquial",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "stylistic-preserve",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "open-four",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "no-punctuation-imposition",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "compound-vs-free",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "nonjoiner",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "ke-lexical",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    },
+    {
+      "id": "text-instruction",
+      "passed": true,
+      "matches_reference": true,
+      "idempotence": true,
+      "first_difference": null
+    }
+  ]
+}
