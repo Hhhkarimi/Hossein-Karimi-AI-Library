@@ -1,0 +1,4 @@
+﻿campaign_id,series_id,start,end,post_periods,lookback_periods
+SYNTH_profitable,profitable,2025-08-04,2025-08-17,28,210
+SYNTH_volume_but_loss,volume_but_loss,2025-08-04,2025-08-17,28,210
+SYNTH_forward_signature,forward_signature,2025-08-04,2025-08-17,28,210

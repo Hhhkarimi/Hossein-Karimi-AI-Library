@@ -1,0 +1,218 @@
+{
+  "engine_version": "1.0.0",
+  "python": "3.12.14",
+  "libraries": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "config": {
+    "sales": {
+      "path": "sales.csv"
+    },
+    "campaigns": {
+      "path": "campaigns.csv"
+    },
+    "costs": {
+      "path": "costs.csv"
+    },
+    "frequency": "D",
+    "financial_mode": true,
+    "currency": "تومان؛ داده ساختگی",
+    "volume_unit": "واحد فرضی",
+    "entity_level": "شرکت فرضی",
+    "cost_coverage_confirmed": true,
+    "roi_hurdle": 0.15,
+    "min_pre_periods": 56,
+    "bootstrap_samples": 500,
+    "block_length": 7,
+    "seed": 42,
+    "max_validation_wape": 0.3,
+    "is_synthetic": true,
+    "context_notes": "Completely synthetic; three non-overlapping fictional series; no control group."
+  },
+  "config_sha256": "40273c3c85e4d520619e069b9b271abfcec3443a34d1a811fad07032e2775a3b",
+  "sources": [
+    {
+      "path": "../synthetic-input/sales.csv",
+      "sha256": "d9c60b7a2ed893a6aab557f30642acaac922ab76ea0f826c5c83d041d0c8699e",
+      "rows": 756
+    },
+    {
+      "path": "../synthetic-input/campaigns.csv",
+      "sha256": "959a3bfae59987962bfee7d96c47381c32adef02df8615b570d010f04502579c",
+      "rows": 3
+    },
+    {
+      "path": "../synthetic-input/costs.csv",
+      "sha256": "82fa7986797be050f2f207443c489523138b24bf305f6608941a4269be908916",
+      "rows": 6
+    }
+  ],
+  "results": [
+    {
+      "campaign_id": "SYNTH_forward_signature",
+      "series_id": "forward_signature",
+      "model": "trend_calendar_ols",
+      "model_mae": {
+        "mean": 10.325526742358393,
+        "trend_calendar_ols": 0.38469149522187374
+      },
+      "validation_horizon": 42,
+      "clean_pre_periods": 210,
+      "excluded_pre_periods": 0,
+      "actual_units": 5115.222209255863,
+      "baseline_units": 5109.986373838047,
+      "incremental_units_during": 491.35744709188475,
+      "incremental_units_post": -486.12161167406913,
+      "incremental_units_total": 5.235835417815622,
+      "incremental_units_95_model_interval": [
+        -2.587796425348509,
+        11.712967233665916
+      ],
+      "lift_during": 0.2911296585838922,
+      "post_offset_units_proxy": 486.12161167406913,
+      "post_offset_ratio_proxy": 0.9893441415230316,
+      "forward_buying_interpretation": "descriptive_signature_only_not_proof",
+      "method_scope": "forecast_based_conditional_on_stability_not_causal",
+      "evidence_flags": [],
+      "coefficients": [
+        100.0197654613727,
+        29.009850895676287,
+        6.947088618270987,
+        9.150059711758605,
+        12.132856416871848,
+        15.064188834789414,
+        -7.921630822975915,
+        -11.9981870055245
+      ],
+      "incremental_contribution": -22581.756666505462,
+      "investment": 22791.190083218087,
+      "roi": -0.9908107731124213,
+      "decision": "candidate_for_stop_or_redesign_subject_to_design_review",
+      "actual_contribution_before_external_costs": 182817.69828701642,
+      "baseline_contribution": 204399.45495352193,
+      "external_costs_deducted": 1000.0,
+      "embedded_costs_not_deducted_twice": 21791.190083218087,
+      "incremental_contribution_95_model_interval": [
+        -22894.701940232033,
+        -22322.671393871464
+      ],
+      "roi_95_model_interval": [
+        -1.004541748659723,
+        -0.9794429914525784
+      ],
+      "roi_definition": "incremental_contribution_net_of_all_campaign_costs / agreed_investment"
+    },
+    {
+      "campaign_id": "SYNTH_profitable",
+      "series_id": "profitable",
+      "model": "trend_calendar_ols",
+      "model_mae": {
+        "mean": 10.36467748260484,
+        "trend_calendar_ols": 0.4493832295746117
+      },
+      "validation_horizon": 42,
+      "clean_pre_periods": 210,
+      "excluded_pre_periods": 0,
+      "actual_units": 5668.688081056435,
+      "baseline_units": 5113.0951600566395,
+      "incremental_units_during": 558.9472965516353,
+      "incremental_units_post": -3.354375551840178,
+      "incremental_units_total": 555.5929209997951,
+      "incremental_units_95_model_interval": [
+        545.5011027833672,
+        564.6468471145844
+      ],
+      "lift_during": 0.33098394053951635,
+      "post_offset_units_proxy": 3.354375551840178,
+      "post_offset_ratio_proxy": 0.006001237634629658,
+      "forward_buying_interpretation": "descriptive_signature_only_not_proof",
+      "method_scope": "forecast_based_conditional_on_stability_not_causal",
+      "evidence_flags": [],
+      "coefficients": [
+        100.07578900549255,
+        29.109291028098838,
+        7.051173528976134,
+        9.033160444054483,
+        12.061767886072765,
+        14.866789311468196,
+        -7.879722981540777,
+        -12.07210520527326
+      ],
+      "incremental_contribution": 16728.333323162926,
+      "investment": 5495.383516828875,
+      "roi": 3.0440702222028087,
+      "decision": "candidate_for_repeat_subject_to_design_review",
+      "actual_contribution_before_external_costs": 222252.13972542857,
+      "baseline_contribution": 204523.80640226562,
+      "external_costs_deducted": 1000.0,
+      "embedded_costs_not_deducted_twice": 4495.383516828875,
+      "incremental_contribution_95_model_interval": [
+        16324.660594505829,
+        17090.490367754493
+      ],
+      "roi_95_model_interval": [
+        2.9706135239722116,
+        3.109972273166588
+      ],
+      "roi_definition": "incremental_contribution_net_of_all_campaign_costs / agreed_investment"
+    },
+    {
+      "campaign_id": "SYNTH_volume_but_loss",
+      "series_id": "volume_but_loss",
+      "model": "trend_calendar_ols",
+      "model_mae": {
+        "mean": 10.33492324854344,
+        "trend_calendar_ols": 0.42979047764373696
+      },
+      "validation_horizon": 42,
+      "clean_pre_periods": 210,
+      "excluded_pre_periods": 0,
+      "actual_units": 5221.314932017194,
+      "baseline_units": 5108.259217897258,
+      "incremental_units_during": 113.09813060323678,
+      "incremental_units_post": -0.042416483299788865,
+      "incremental_units_total": 113.055714119937,
+      "incremental_units_95_model_interval": [
+        104.36110167377323,
+        121.19728078615586
+      ],
+      "lift_during": 0.06703242519730856,
+      "post_offset_units_proxy": 0.042416483299788865,
+      "post_offset_ratio_proxy": 0.0003750414182228308,
+      "forward_buying_interpretation": "descriptive_signature_only_not_proof",
+      "method_scope": "forecast_based_conditional_on_stability_not_causal",
+      "evidence_flags": [],
+      "coefficients": [
+        99.9613187198431,
+        28.955033843046046,
+        7.176394299962608,
+        9.082554194300585,
+        12.087572651360956,
+        15.070039786614824,
+        -7.7929798747046295,
+        -11.88578188770017
+      ],
+      "incremental_contribution": -32484.039216097037,
+      "investment": 37006.26778089453,
+      "roi": -0.877798307260474,
+      "decision": "candidate_for_stop_or_redesign_subject_to_design_review",
+      "actual_contribution_before_external_costs": 172846.3294997933,
+      "baseline_contribution": 204330.36871589033,
+      "external_costs_deducted": 1000.0,
+      "embedded_costs_not_deducted_twice": 36006.26778089453,
+      "incremental_contribution_95_model_interval": [
+        -32831.82371394358,
+        -32158.376549448272
+      ],
+      "roi_95_model_interval": [
+        -0.8871962962688682,
+        -0.8689981043170987
+      ],
+      "roi_definition": "incremental_contribution_net_of_all_campaign_costs / agreed_investment"
+    }
+  ],
+  "interval_scope": "95% residual moving-block predictive bootstrap, conditional on selected model; not causal confidence",
+  "aggregation": "No portfolio sum is emitted: analyst must establish non-overlap and dependence",
+  "source_path_basis": "relative_to_this_manifest_for_portable_synthetic_example"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "حسابرسی اثربخشی پروموشن"
+  short_description: "تحلیل فروش افزایشی، سود و خرید جلوتر از موعد"
+  default_prompt: "با $trade-promo-roi-analyzer فایل‌های Excel یا CSV من را بررسی کن، پرسش‌های ضروری را بپرس و اثر کمپین را بر فروش و سود شرکت بسنج."
+policy:
+  allow_implicit_invocation: true

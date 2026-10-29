@@ -1,0 +1,25 @@
+{
+  "sales": {
+    "path": "sales.csv"
+  },
+  "campaigns": {
+    "path": "campaigns.csv"
+  },
+  "costs": {
+    "path": "costs.csv"
+  },
+  "frequency": "D",
+  "financial_mode": true,
+  "currency": "تومان؛ داده ساختگی",
+  "volume_unit": "واحد فرضی",
+  "entity_level": "شرکت فرضی",
+  "cost_coverage_confirmed": true,
+  "roi_hurdle": 0.15,
+  "min_pre_periods": 56,
+  "bootstrap_samples": 500,
+  "block_length": 7,
+  "seed": 42,
+  "max_validation_wape": 0.3,
+  "is_synthetic": true,
+  "context_notes": "Completely synthetic; three non-overlapping fictional series; no control group."
+}

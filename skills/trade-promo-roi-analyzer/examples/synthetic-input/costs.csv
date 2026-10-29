@@ -1,0 +1,7 @@
+﻿cost_id,campaign_id,series_id,category,amount,embedded_in_actuals,include_in_investment
+profitable_discount,SYNTH_profitable,profitable,discount,4495.383516828875,True,True
+profitable_display,SYNTH_profitable,profitable,display,1000.0,False,True
+volume_but_loss_discount,SYNTH_volume_but_loss,volume_but_loss,discount,36006.26778089453,True,True
+volume_but_loss_display,SYNTH_volume_but_loss,volume_but_loss,display,1000.0,False,True
+forward_signature_discount,SYNTH_forward_signature,forward_signature,discount,21791.190083218087,True,True
+forward_signature_display,SYNTH_forward_signature,forward_signature,display,1000.0,False,True

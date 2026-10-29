@@ -1,0 +1,19 @@
+﻿campaign_id,series_id,baseline_factor,additional_external_cost,incremental_contribution,roi,interpretation,cost_assumption
+SYNTH_forward_signature,forward_signature,0.9,0.0,-2141.8111711533275,-0.09397539853482309,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_forward_signature,forward_signature,0.9,1000.0,-3141.8111711533275,-0.13205775584002874,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_forward_signature,forward_signature,1.0,0.0,-22581.756666505506,-0.9908107731124232,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_forward_signature,forward_signature,1.0,1000.0,-23581.756666505506,-0.9911970180566834,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_forward_signature,forward_signature,1.1,0.0,-43021.70216185771,-1.8876461476900246,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_forward_signature,forward_signature,1.1,1000.0,-44021.70216185771,-1.8503362802733392,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_profitable,profitable,0.9,0.0,37180.71396338951,6.76580876467103,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_profitable,profitable,0.9,1000.0,36180.71396338951,5.570219813756798,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_profitable,profitable,1.0,0.0,16728.33332316295,3.044070222202813,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_profitable,profitable,1.0,1000.0,15728.333323162951,2.4214633797084417,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_profitable,profitable,1.1,0.0,-3724.0473170636396,-0.677668320265409,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_profitable,profitable,1.1,1000.0,-4724.04731706364,-0.7272930543399194,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_volume_but_loss,volume_but_loss,0.9,0.0,-12051.002344508015,-0.3256476015322373,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_volume_but_loss,volume_but_loss,0.9,1000.0,-13051.002344508015,-0.3433907906913359,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_volume_but_loss,volume_but_loss,1.0,0.0,-32484.039216097037,-0.877798307260474,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_volume_but_loss,volume_but_loss,1.0,1000.0,-33484.03921609704,-0.8810136109425935,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_volume_but_loss,volume_but_loss,1.1,0.0,-52917.07608768609,-1.4299490129887116,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment
+SYNTH_volume_but_loss,volume_but_loss,1.1,1000.0,-53917.07608768609,-1.4186364311938517,assumed_scenario_not_confidence_interval,extra amount also included in agreed investment

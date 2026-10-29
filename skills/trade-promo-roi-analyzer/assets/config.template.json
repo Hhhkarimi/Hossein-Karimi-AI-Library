@@ -1,0 +1,19 @@
+{
+  "sales": {"path": "sales.csv", "column_map": {}},
+  "campaigns": {"path": "campaigns.csv", "column_map": {}},
+  "costs": {"path": "costs.csv", "column_map": {}},
+  "frequency": "D",
+  "financial_mode": true,
+  "currency": "با مخاطب تعیین شود",
+  "volume_unit": "با مخاطب تعیین شود",
+  "entity_level": "شرکت؛ با مخاطب تأیید شود",
+  "cost_coverage_confirmed": false,
+  "roi_hurdle": 0.0,
+  "min_pre_periods": 56,
+  "bootstrap_samples": 500,
+  "block_length": 7,
+  "seed": 42,
+  "max_validation_wape": 0.3,
+  "is_synthetic": false,
+  "context_notes": "آستانه بازده، تاریخ، واحد، افق و پوشش هزینه پیش از اجرا با مخاطب تنظیم شوند."
+}
