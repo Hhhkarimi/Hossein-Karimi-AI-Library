@@ -6,6 +6,7 @@ Optional packages: PyYAML for robust frontmatter parsing; jsonschema for fixture
 This does NOT prove the strategic quality of agent outputs. See tests/acceptance-scenarios.md.
 """
 from pathlib import Path
+import hashlib
 import json
 import re
 import sys
@@ -13,7 +14,9 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
 expected = {
-    "SKILL.md", "README_FA.md",
+    "SKILL.md", "README_FA.md", "SHA256SUMS.txt",
+    "scripts/prioritize_projects.py", "tests/test_prioritize_projects.py",
+    "examples/04-top-ten-projects.json",
     *[f"references/{x:02d}-{name}.md" for x, name in enumerate([
         "rasta-framework", "diagnostic-and-evidence", "portfolio-and-decisions",
         "value-and-metrics", "role-playbooks", "journeys-and-questions",
@@ -49,9 +52,32 @@ else:
         if not m or m.group(1) != ROOT.name:
             errors.append("Missing or mismatched name in frontmatter")
 
-for rel in re.findall(r"`((?:references|assets|schemas|examples|tests)/[^`\n]+)`", skill):
+for rel in re.findall(r"`((?:references|assets|schemas|examples|tests|scripts)/[^`\n]+)`", skill):
     if not (ROOT / rel).exists():
         errors.append(f"Broken path referenced by SKILL.md: {rel}")
+
+manifest = ROOT / "SHA256SUMS.txt"
+if manifest.is_file():
+    listed = set()
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        match = re.fullmatch(r"([0-9a-f]{64})  (.+)", line)
+        if not match:
+            errors.append("Invalid checksum manifest line")
+            continue
+        digest, rel = match.groups()
+        target = (ROOT / rel).resolve()
+        if not target.is_relative_to(ROOT.resolve()) or not target.is_file():
+            errors.append(f"Invalid manifest path: {rel}")
+            continue
+        if rel in listed:
+            errors.append(f"Duplicate manifest path: {rel}")
+        listed.add(rel)
+        if hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+            errors.append(f"Checksum mismatch: {rel}")
+    actual = {f.relative_to(ROOT).as_posix() for f in ROOT.rglob("*")
+              if f.is_file() and f != manifest and "__pycache__" not in f.parts}
+    if listed != actual:
+        errors.append("Checksum manifest does not cover exactly the package files")
 
 schema_files = sorted((ROOT / "schemas").glob("*.json"))
 for f in schema_files:

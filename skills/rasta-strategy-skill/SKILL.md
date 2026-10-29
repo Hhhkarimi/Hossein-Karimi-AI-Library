@@ -3,7 +3,7 @@ name: rasta-strategy-skill
 description: >-
   چارچوب RASTA برای تدوین، ارزیابی، اولویت‌بندی، اجرا و بازنگری راهبرد مسئولانه هوش مصنوعی در هر سازمان. Use for enterprise AI strategy, AI transformation roadmaps, AI investment portfolios, operating-model redesign, build-buy-partner decisions, value realization, AI governance, and strategic assessment. Supports CEO, strategy leader and professional consultant modes, as well as comprehensive and problem-focused entry paths.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   language: "fa-IR"
   framework: "RASTA — Responsible AI Strategy for Transformation and Adaptation"
   release_date: "2026-10-29"
@@ -86,6 +86,9 @@ metadata:
 5. **توصیه و بستهٔ تصمیم** — انتخاب، سرمایه/مالک، شروط تأیید و گزینهٔ جایگزین.
 6. **نقشهٔ اجرا** — موج‌ها، milestone، KPIها، نقاط go/pivot/stop.
 7. **دفتر شواهد و فرضیات** — منابع، تاریخ، اطمینان، داده‌های مفقود و تصمیم‌های باز.
+8. **۱۰ پروژهٔ پیشنهادی AI، اولویت‌بندی‌شده با درصد اهمیت** — این جدول را به خروجی تحلیلی/پیشنهادی هر سه نقش و هر دو مسیر **اضافه کن**؛ گزارش راهبرد، گزینه‌ها، تصمیم‌نامه، نقشهٔ اجرا و سایر خروجی‌های بالا را حفظ کن. در FOCUSED پروژه‌ها باید در محدودهٔ همان مسئله بمانند. هر پروژه باید مسئله‌ای مشخص، کاربرد واقعی AI، KPI، مالک پیشنهادی، شرط اجرا و قدم بعدی داشته باشد. درصد اهمیت، سهم نسبی از مجموع ۱۰۰٪ همین سبد است. پیش از ساخت این بخش، قرارداد، فرمول و استثناهای `references/03-portfolio-and-decisions.md` را بخوان و از `assets/portfolio-roadmap.md` استفاده کن.
+
+این بخش در تحویل تحلیل مقدماتی و نهایی پیش‌فرض است؛ پاسخ صرفاً آغاز مأموریت، پرسش تکمیلی، توضیح اصطلاح یا تغییر نقش به تکرار جدول نیاز ندارد. درخواست صریح کاربر برای تعداد/قالب دیگر مقدم است. کمبود شواهد را با فرض‌های آشکار و رتبه‌بندی مقدماتی مدیریت کن؛ اگر حتی تناسب یا مشروعیت ۱۰ نامزد قابل دفاع نیست، کمبود و دلیل را گزارش کن و جدول را با پروژهٔ تکراری، نامرتبط یا ممنوع پر نکن.
 
 قالب‌های آماده در `assets/` هستند؛ مدل نقشهٔ خروجی در `references/08-deliverables-and-qa.md` آمده است.
 
@@ -106,7 +109,7 @@ metadata:
 
 - `references/01-rasta-framework.md` — فلسفه، هفت راهبرد و تحلیل تعامل آن‌ها.
 - `references/02-diagnostic-and-evidence.md` — مصاحبه، شواهد، بلوغ و کیفیت داده.
-- `references/03-portfolio-and-decisions.md` — گزینش، وزن‌دهی، سبد و دروازه‌های تصمیم.
+- `references/03-portfolio-and-decisions.md` — گزینش، وزن‌دهی و قرارداد جدول افزودهٔ ۱۰ پروژهٔ AI با درصد اهمیت؛ هنگام تحویل تحلیل/پیشنهاد بخوان.
 - `references/04-value-and-metrics.md` — ارزش اقتصادی، KPI و اقتصاد پروژه.
 - `references/05-role-playbooks.md` — سه حالت کاری.
 - `references/06-journeys-and-questions.md` — دو مسیر، پرسش‌های مرحله‌ای و شروع کم‌اطلاعات.
