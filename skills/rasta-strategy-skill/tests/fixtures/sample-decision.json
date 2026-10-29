@@ -1,0 +1,13 @@
+{
+  "decision_id": "RASTA-DEC-DEMO-01",
+  "date": "2026-10-29",
+  "alternatives": ["بهبود فرایند بدون AI", "پایلوت محدود AI"],
+  "status": "DEFERRED",
+  "rationale": "خط پایه و کنترل‌های حقوقی هنوز بررسی نشده‌اند",
+  "evidence_ids": [],
+  "approver": "نقش تصمیم‌گیر (در مثال فرضی)",
+  "benefit_owner": null,
+  "risk_owner": null,
+  "conditions": ["تهیه خط پایه و ارزیابی مشروعیت داده"],
+  "next_review_date": null
+}

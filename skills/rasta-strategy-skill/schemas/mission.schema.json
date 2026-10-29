@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RASTA Mission Brief",
+  "description": "ساختار تبادل اطلاعات مأموریت؛ برای استفاده اختیاری. نداشتن داده با null یا UNKNOWN نمایش داده شود.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mission_id", "mode", "entry_path", "organization_scope", "decision_problem", "evidence_status"],
+  "properties": {
+    "mission_id": {"type": "string", "minLength": 1},
+    "mode": {"enum": ["CEO", "STRATEGY", "CONSULTANT"]},
+    "entry_path": {"enum": ["ENTERPRISE", "FOCUSED"]},
+    "organization_scope": {"type": "string", "minLength": 1},
+    "industry": {"type": ["string", "null"]},
+    "jurisdiction": {"type": ["string", "null"]},
+    "decision_problem": {"type": "string", "minLength": 1},
+    "decision_owner": {"type": ["string", "null"]},
+    "business_goal": {"type": ["string", "null"]},
+    "baseline_metric": {"type": ["string", "null"]},
+    "time_horizon": {"type": ["string", "null"]},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "available_sources": {"type": "array", "items": {"type": "string"}},
+    "open_questions": {"type": "array", "items": {"type": "string"}, "maxItems": 3},
+    "evidence_status": {"enum": ["PRELIMINARY", "CONDITIONAL", "DECISION_READY"]}
+  }
+}

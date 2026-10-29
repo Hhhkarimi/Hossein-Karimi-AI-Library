@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RASTA Initiative Card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["initiative_id", "problem", "primary_strategy", "counterfactual", "risk_gate", "evidence_confidence", "decision_status"],
+  "properties": {
+    "initiative_id": {"type": "string", "minLength": 1},
+    "name": {"type": "string"},
+    "problem": {"type": "string", "minLength": 1},
+    "primary_strategy": {"enum": ["PRODUCTIVITY", "EXPERTISE", "OPERATING_MODEL", "BUSINESS_MODEL", "RESPONSIBILITY", "ADAPTATION", "ECOSYSTEM"]},
+    "other_strategies": {"type": "array", "uniqueItems": true, "items": {"enum": ["PRODUCTIVITY", "EXPERTISE", "OPERATING_MODEL", "BUSINESS_MODEL", "RESPONSIBILITY", "ADAPTATION", "ECOSYSTEM"]}},
+    "counterfactual": {"type": "string", "minLength": 1},
+    "business_owner": {"type": ["string", "null"]},
+    "benefit_owner": {"type": ["string", "null"]},
+    "risk_owner": {"type": ["string", "null"]},
+    "baseline": {"type": ["string", "null"]},
+    "target_kpi": {"type": ["string", "null"]},
+    "value_assumptions": {"type": "array", "items": {"type": "string"}},
+    "total_cost_of_ownership": {"type": ["string", "null"]},
+    "human_oversight": {"type": ["string", "null"]},
+    "supplier_exit_plan": {"type": ["string", "null"]},
+    "risk_gate": {"enum": ["NOT_ASSESSED", "STOP", "REDESIGN", "LEGAL_REVIEW", "CONTROLLED_PILOT", "PROCEED"]},
+    "evidence_confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+    "decision_status": {"enum": ["PRELIMINARY", "VALIDATE", "PILOT", "SCALE", "PIVOT", "STOP", "DEFER"]},
+    "stop_conditions": {"type": "array", "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "next_review_date": {"type": ["string", "null"], "format": "date"}
+  }
+}

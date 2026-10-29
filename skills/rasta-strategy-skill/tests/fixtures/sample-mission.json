@@ -1,0 +1,17 @@
+{
+  "mission_id": "RASTA-MIS-DEMO-01",
+  "mode": "STRATEGY",
+  "entry_path": "FOCUSED",
+  "organization_scope": "شرکت فرضی - فرایند سفارش تا وصول",
+  "industry": "خدماتی",
+  "jurisdiction": null,
+  "decision_problem": "آیا AI برای کاهش مغایرت صورتحساب نسبت به اصلاح فرایند ارزش افزوده دارد؟",
+  "decision_owner": null,
+  "business_goal": "بهبود کیفیت صورتحساب و زمان وصول",
+  "baseline_metric": null,
+  "time_horizon": "مرحله کشف و آزمایش، بدون موعد قطعی",
+  "constraints": ["عدم استفاده از داده شخصی بدون مجوز"],
+  "available_sources": [],
+  "open_questions": ["نرخ مغایرت فعلی چیست؟", "منشأ اصلی خطا چیست؟", "مالک فرایند کیست؟"],
+  "evidence_status": "PRELIMINARY"
+}

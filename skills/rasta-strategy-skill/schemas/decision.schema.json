@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RASTA Decision Log",
+  "type": "object",
+  "required": ["decision_id", "date", "alternatives", "status", "rationale", "evidence_ids", "approver"],
+  "properties": {
+    "decision_id": {"type": "string", "minLength": 1},
+    "date": {"type": "string", "format": "date"},
+    "alternatives": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "status": {"enum": ["APPROVED", "CONDITIONAL", "DEFERRED", "REJECTED", "PIVOT", "STOP"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "approver": {"type": "string", "minLength": 1},
+    "benefit_owner": {"type": ["string", "null"]},
+    "risk_owner": {"type": ["string", "null"]},
+    "conditions": {"type": "array", "items": {"type": "string"}},
+    "next_review_date": {"type": ["string", "null"], "format": "date"}
+  },
+  "additionalProperties": false
+}

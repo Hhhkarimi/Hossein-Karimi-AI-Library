@@ -1,0 +1,23 @@
+{
+  "initiative_id": "RASTA-INI-DEMO-01",
+  "name": "تطبیق قیمت سفارش",
+  "problem": "مغایرت احتمالی قیمت در سفارش‌های مشتری",
+  "primary_strategy": "OPERATING_MODEL",
+  "other_strategies": ["PRODUCTIVITY", "RESPONSIBILITY"],
+  "counterfactual": "اصلاح داده پایه، قوانین قیمت و کنترل دستی هدفمند بدون AI",
+  "business_owner": null,
+  "benefit_owner": null,
+  "risk_owner": null,
+  "baseline": null,
+  "target_kpi": "نرخ مغایرت؛ زمان رسیدگی؛ درصد خطای منجر به صورتحساب اشتباه",
+  "value_assumptions": ["داده مجاز و نمونه برچسب‌خورده در دسترس شود"],
+  "total_cost_of_ownership": null,
+  "human_oversight": "تأیید انسانی مغایرت‌های حساس پیش از صدور صورتحساب",
+  "supplier_exit_plan": null,
+  "risk_gate": "NOT_ASSESSED",
+  "evidence_confidence": "UNKNOWN",
+  "decision_status": "PRELIMINARY",
+  "stop_conditions": ["عدم امکان استفاده مجاز از داده مشتری"],
+  "evidence_ids": [],
+  "next_review_date": null
+}
