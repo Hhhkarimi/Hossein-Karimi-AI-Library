@@ -122,6 +122,10 @@ For economics, specify baseline, cohort, before/after comparison, benefits, one-
 - For a Build/Hybrid candidate, self-hosting or a detailed cost comparison, read [Internal delivery and investment case](references/INTERNAL_DELIVERY_TCO.md). Estimate pilot and production separately, and compare feasible alternatives on the same workload and quality target.
 - For each opportunity seeking funding, include a decision card in the roadmap. At MAP show a conditional sourcing decision and the evidence needed to approve a pilot. At PROVE compare candidates on the same approved workload against baseline. At ACTIVATE require an accepted operating budget, support owner, acceptance evidence and rollback before recommending live deployment. Defer detailed sourcing for lower-ranked cases until it affects a decision.
 
+## Project definition
+
+A ranked portfolio is an index into the project definitions. Read [Project definition and handoff](references/PROJECT_CHARTERS.md) at MAP. Give every candidate a disposition and write a separate charter for each project proposed for approval or pilot. Include the charters in the deliverable or attach them as an appendix, including when the roadmap is provisional.
+
 ## Deliverable contract
 
 When the case is sufficiently understood, create a **board-ready, decision-oriented output** in Persian, tailored to the company. Use `assets/ROADMAP_TEMPLATE.md`. Include:
