@@ -1,0 +1,44 @@
+{
+  "note": "Illustrative inputs only. Not Golrang company facts.",
+  "projects": [
+    {
+      "name": "پیش‌بینی تقاضا و کسری قفسه (فرضی)",
+      "scores": {
+        "business_value": 5, "data_readiness": 2, "test_feasibility": 3,
+        "risk_manageability": 4, "reusability": 5, "owner_commitment": 4
+      },
+      "gates": {
+        "accountable_owner": true,
+        "lawful_data_access": false,
+        "risk_review_passed": true
+      },
+      "evidence_notes": "دسترسی مجاز بین واحدها هنوز احراز نشده است؛ هرگونه استفاده عملیاتی مسدود است."
+    },
+    {
+      "name": "دستیار دانش برای اسناد غیرمحرمانه (فرضی)",
+      "scores": {
+        "business_value": 2, "data_readiness": 5, "test_feasibility": 5,
+        "risk_manageability": 4, "reusability": 5, "owner_commitment": 4
+      },
+      "gates": {
+        "accountable_owner": true,
+        "lawful_data_access": true,
+        "risk_review_passed": true
+      },
+      "evidence_notes": "صرفاً مثال عددی است؛ نیازمند تعریف شاخص خط مبنا و مطالعه واقعی است."
+    },
+    {
+      "name": "کنترل کیفیت مبتنی بر بینایی ماشین (فرضی)",
+      "scores": {
+        "business_value": 4, "data_readiness": null, "test_feasibility": 3,
+        "risk_manageability": 3, "reusability": 4, "owner_commitment": 4
+      },
+      "gates": {
+        "accountable_owner": true,
+        "lawful_data_access": true,
+        "risk_review_passed": false
+      },
+      "evidence_notes": "کیفیت داده تصویری نامعلوم و ارزیابی ایمنی کامل نشده است."
+    }
+  ]
+}

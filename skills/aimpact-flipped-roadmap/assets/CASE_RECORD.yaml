@@ -1,0 +1,47 @@
+schema_version: "1.0"
+company:
+  name: null
+  legal_entity: null
+  group_name: null
+  scope: null # subsidiary / holding / value-stream
+  sectors: []
+  source: unknown
+interview:
+  state: S0_ORIENT
+  mode: deep # rapid / deep / deliver_now
+  previously_asked: []
+  answered_questions: []
+  pending_high_priority_question: null
+strategy:
+  business_objectives: []
+  priority_process: null
+  process_owner: null
+  executive_sponsor: null
+  business_context: []
+  constraints: []
+performance:
+  metrics: [] # each: name, definition, scope, baseline, unit, period, source, confidence
+  baseline_discovery_tasks: []
+readiness:
+  data: {status: unknown, systems: [], quality_issues: [], sharing_permissions: unknown}
+  technology: {status: unknown, integrations: [], deployment_constraints: []}
+  people: {status: unknown, skills: [], change_issues: []}
+  governance: {status: unknown, policies: [], accountable_roles: []}
+portfolio:
+  opportunities: [] # each: name, value_hypothesis, modality, scores, blockers, owner, evidence
+  recommended_operating_model: unknown
+  sourcing_choice: unknown
+  investment_decisions: [] # each: opportunity, alternatives, verified_offers, gates, design, cost_scenarios, approver
+stage_gates:
+  align: unknown
+  inspect: unknown
+  map: unknown
+  prove: unknown
+  activate: unknown
+  cascade: unknown
+  transform: unknown
+evidence_ledger: [] # each: claim, type [I,V,E,H,U], source, as_of, caveat
+assumptions: []
+unknowns: []
+risks: []
+current_recommendation_confidence: limited
