@@ -1,0 +1,8 @@
+{
+  "database": "holdings",
+  "language": "per",
+  "clauses": [
+    {"field": "title", "value": "اوتیسم"},
+    {"field": "publication", "value": "حوزه مشق"}
+  ]
+}

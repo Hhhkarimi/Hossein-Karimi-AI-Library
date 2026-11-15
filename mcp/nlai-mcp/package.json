@@ -1,0 +1,30 @@
+{
+  "name": "nlai-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Live MCP for the National Library and Archives of Iran public catalog",
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/stdio.js",
+    "start:http": "node dist/http.js",
+    "harvest:year": "node scripts/harvest-first-printings.mjs",
+    "test": "npm run build && node --test --test-isolation=none test/*.test.mjs",
+    "verify:live": "npm run build && node scripts/verify-live.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "2.1.2",
+    "@modelcontextprotocol/server": "2.4.0",
+    "cheerio": "1.2.0",
+    "exceljs": "4.4.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.4.0",
+    "@types/node": "^24.0.0",
+    "typescript": "6.0.3"
+  },
+  "overrides": {"exceljs": {"uuid": "11.1.1"}}
+}

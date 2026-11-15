@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "nlai": {
+      "command": "node",
+      "args": ["C:/path/to/nlai-mcp/dist/stdio.js"],
+      "env": {"NLAI_EXPORT_DIR": "C:/path/to/nlai-exports"}
+    }
+  }
+}
