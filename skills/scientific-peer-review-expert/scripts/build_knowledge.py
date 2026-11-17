@@ -31,6 +31,7 @@ BUNDLES = {
         "templates/minor-comment.md",
         "templates/decision-summary.md",
         "templates/reviewer-report.md",
+        "templates/review-ratings.md",
     ],
 }
 

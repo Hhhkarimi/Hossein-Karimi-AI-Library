@@ -1,6 +1,6 @@
 # Editorial recommendation rules
 
-Make a qualitative decision from central validity, evidence, contribution, journal fit when known and remediability. Findings are not votes. Neither a checklist count nor a numerical average determines a recommendation. Explain uncertainty instead of inventing acceptance probabilities.
+Make a qualitative decision from central validity, evidence, contribution, journal fit when known and remediability. Use the underlying findings and their consequences for the recommendation. Criterion ratings summarize those findings for the reader. Explain uncertainty directly.
 
 ## First decide whether a recommendation is supportable
 

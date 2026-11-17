@@ -1,4 +1,13 @@
-# Validation record — SPRE 1.0
+# Validation records — SPRE
+
+## SPRE 2.0.0 — 2026-11-17
+
+- Windows, Python 3.12.1. The official skill validator and package validator passed. All eight package-tool tests passed. The four regenerated Knowledge files match their canonical sources. The Custom GPT core is 7,401 characters within the package's engineering budget.
+- An independent assistant performed a focused Persian review of the public [TRIPOD+AI statement](https://doi.org/10.1136/bmj-2023-078378), with no target venue supplied. It inspected and anchored the closest [TRIPOD 2015](https://doi.org/10.1136/bmj.g7594) checklist. It documented narrower access for MI-CLAIM and treated a [2025 study of reporting in orthopaedic abstracts](https://doi.org/10.7759/cureus.97176) as later evidence with limited scope. The report contained detailed comments and an evidence-linked rating table. It marked venue fit and whole-manuscript readiness unassessable and withheld a whole-manuscript recommendation.
+- The first matrix conveyed source access and judgments in prose and omitted explicit per-row labels. After a template and QA correction, a focused rerender of the same evidence included basis, limits, distinctiveness, importance and support in every row.
+- This exercise covered aspects of T23 and T25 within a focused public case. It did not exercise the full T01–T28 matrix, a confidential manuscript, or a hosted Custom GPT.
+
+## SPRE 1.0 — historical record
 
 Date: 2026-10-20. Environment: Windows; Python 3.12.1; local Codex authoring session and one separate evaluating assistant. No real manuscript or confidential third-party content was used. This record separates package checks, tool tests and observed model behavior.
 

@@ -25,6 +25,7 @@ scientific-peer-review-expert/
   templates/evidence-register.md
   templates/major-comment.md
   templates/minor-comment.md
+  templates/review-ratings.md
   templates/reviewer-report.md
   tests/acceptance-criteria.md
   tests/failure-modes.md

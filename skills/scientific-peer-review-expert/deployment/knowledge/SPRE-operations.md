@@ -21,7 +21,8 @@ Apply explicit session choices first, then journal requirements within applicabl
 | Confidentiality | Unknown until established; preflight only while unresolved |
 | Authorization | Record permitted scope, environment and restrictions; never infer from upload alone |
 | External verification | Use only authorized available tools; no confidential text in queries by default |
-| Literature scope | Central contribution and high-impact claims; expand when new evidence warrants it |
+| Literature scope | All central contribution claims in a full review and high-impact claims in scope. Search independently where authorized and available. |
+| Criterion ratings | Default on for full review and revision reassessment. Follow journal form and explicit user choices. |
 | Reference scope | All references underpinning central/disputed claims first, then transparently sampled others |
 | Statistics | Reported-information audit by default; independent recomputation only with adequate inputs and tools |
 | Additional analyses | Request only what is needed to test or qualify the existing central claims |
@@ -110,7 +111,7 @@ Use a single evidence register across stages. Each stage yields a short summary,
 |---|---|---|
 | 1. Profile | Identify discipline, design, question, claims, evidence, standards, completeness and analytical dependencies | Profile and materials inventory exist; uncertain consequential classification is confirmed |
 | 2. Concepts/theory | Evaluate problem importance, objectives, definitions, framework, hypotheses where relevant, logical coherence and aim-method-result alignment | Central concepts and inferential assumptions are mapped, with traceable issues only |
-| 3. Novelty/literature | Compare claimed contribution with available literature using novelty-assessment | Search scope and limits recorded; each novelty judgment names its evidential basis |
+| 3. Novelty/literature | Apply [contribution assessment](../references/novelty-assessment.md) to every central contribution claim | Search scope and limits recorded; claim-level matrix and bounded judgments on distinctiveness, importance and support are complete |
 | 4. Methods | Apply selected design branches from methodology-audit; distinguish reporting gaps from procedures known to be flawed | Consequential threats, mitigation and missing evidence identified for the actual paradigm |
 | 5. Quantitative or alternative rigor | Audit statistics, equations, numerical claims, or qualitative/theoretical analogues | Consequential numerical checks are performed or explicitly unavailable; irrelevant checks excluded |
 | 6. Results/evidence | Map each central conclusion to results, tables, figures, proof or source interpretation; compare narrative and displays | Claim-evidence map covers central claims with supported/partial/unsupported/not assessable labels |
@@ -119,7 +120,7 @@ Use a single evidence register across stages. Each stage yields a short summary,
 | 9. Ethics/integrity | Apply publication-ethics and relevant disciplinary requirements | Relevant approvals/disclosures and cautious indicators assessed within permitted scope |
 | 10. Presentation | Assess title/abstract fidelity, organization, terminology, figures/tables and journal form | Scientific and presentation issues separated; language bias and gratuitous copyediting removed |
 | 11. Synthesis | Merge duplicates, resolve contradictions, check severity/status/remediability and counterevidence | Every retained substantive criticism has a defensible evidence record; root issues counted once |
-| 12. QA | Apply final-quality-control and decision-engine, then render the appropriate report | QA passes or report is narrowed/withheld with an explicit reason |
+| 12. QA | Apply final-quality-control and decision-engine, then render the report with applicable criterion ratings | QA passes or report is narrowed/withheld with an explicit reason |
 
 ## Long manuscripts and interruptions
 
@@ -163,7 +164,7 @@ Attach evidence to the exact claim it supports or challenges. A contradictory so
 
 # Editorial recommendation rules
 
-Make a qualitative decision from central validity, evidence, contribution, journal fit when known and remediability. Findings are not votes. Neither a checklist count nor a numerical average determines a recommendation. Explain uncertainty instead of inventing acceptance probabilities.
+Make a qualitative decision from central validity, evidence, contribution, journal fit when known and remediability. Use the underlying findings and their consequences for the recommendation. Criterion ratings summarize those findings for the reader. Explain uncertainty directly.
 
 ## First decide whether a recommendation is supportable
 
@@ -204,5 +205,7 @@ Audit the report against original accessible material and the evidence register.
 10. Decision: recommendation follows surviving central findings and repairability; missing essentials trigger withholding; Q1/Q2 alone changes no threshold.
 11. Integrity: suspicious indicators expressed cautiously; no unsupported accusations or AI-authorship detection claims; editor-only material is separate and requested.
 12. Communication: requested report language used; scientific meaning, units, equations, names and identifiers preserved; respectful actionable prose; journal form honored; limitations and human responsibility disclosed.
+13. Contribution: each central claim has a matrix row with an explicit basis label, limits, and distinctiveness, importance and support judgments. Closest-work anchors support the claimed overlap/difference, comparative numbers share an adequate basis, and counterevidence is reflected in the bounded judgment.
+14. Ratings: the applicable table accompanies the comments. Each number has a checkable basis, a calibrated confidence label and a matching rubric band. Missing evidence is marked unassessable where appropriate. Ratings are consistent with the findings and serve only as a criterion-level summary.
 
-Keep a short QA result: passed gates, unresolved limitations, recommendation state and any corrections made. This is a self-check, not a guarantee or an independent expert consensus. Release criteria: no unresolved material failure in gates 1–12 for the scope claimed.
+Keep a short QA result with passed gates, unresolved limitations, recommendation state and any corrections made. Deliver when each applicable gate passes for the claimed scope.

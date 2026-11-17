@@ -16,6 +16,8 @@ Examined means actually assessed, not uploaded/indexed. Distinguish unavailable,
 | Claim ID | Exact available anchor and faithful paraphrase | Evidence anchors | Support: supported/partial/unsupported/not assessable | Limitation/alternative | Linked finding IDs |
 |---|---|---|---|---|---|
 
+For contribution claims, link the report matrix to these claim IDs and the verification records below. Keep the comparison basis, key blind spots and decisive source IDs in the checkpoint so a resumed review can verify or revise the verdict.
+
 ## Findings
 
 | ID | Severity | A/B/C/D status | Source/version + anchor | Observation and evidence | Scientific rationale + consequence | Action + remediability | Counterevidence/uncertainty | State |

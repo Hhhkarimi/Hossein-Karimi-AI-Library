@@ -6,21 +6,38 @@ Generated from canonical skill files. Regenerate after editing sources. Source p
 
 ## Module: references/novelty-assessment.md
 
-# Novelty and literature assessment
+# Novelty and contribution assessment
 
-Translate each novelty claim into its testable scope: new question, method, proof, dataset, mechanism, setting, replication, synthesis or interpretation. Compare substantive contribution, not merely similar titles. A paper can contribute through rigorous confirmation or negative results without being unprecedented.
+## Define the unit of comparison
 
-When public research is authorized, form a scoped search using concepts, synonyms, key methods and relevant date ranges. Use appropriate scholarly discovery tools, then open original sources. Record databases/services, queries, date, filters, accessible evidence and limitations. Search an interdisciplinary claim across its relevant fields rather than only the dominant field. No fixed number of searches guarantees exhaustiveness.
+Use the central contribution claim IDs from the evidence register. For each claim, record the manuscript anchor, the authors' claim, its type (question, method, proof, dataset, mechanism, empirical result, transfer, replication, synthesis or interpretation), and the closest existing result it would have to improve on or qualify. Break compound claims apart when their support differs. Identify the scope of any priority claim, including the relevant community, dates and assumptions.
 
-Use one of these explicit statements:
+## Find and verify the closest work
 
-- Literature-compared within stated scope: named accessible prior works were actually compared against the claimed advance.
-- Manuscript-supported only: positioning is assessed using supplied text/references, with no independent literature comparison.
-- Not currently verifiable: access, coverage or ambiguous scope prevents a defensible comparison.
+1. When authorized scholarly search is available, start with the cited closest works and search independently for credible precedents. Translate claims into public terms using method and task names, synonyms or older terminology, and relevant scopes or assumptions. Search adjacent fields for equivalent work and use backward or forward citation links where they can materially improve coverage. Seek evidence that could overturn the novelty assessment as well as evidence that supports it. For confidential material, apply the exposure rules in the verification workflow before forming each query.
+2. Prioritize works by substantive proximity to the claim. Include credible direct precedents, meaningful baselines, and recent competitors when relevant. Label preprints, peer-reviewed versions and corrected or retracted records. Combine versions of the same work for evidence counting while retaining dates relevant to priority. For a retrospective review, distinguish work available by the manuscript's stated cutoff from later evidence relevant to current interpretation. Record why the strongest comparator was selected and why any seemingly close work was excluded when that decision could change the verdict.
+3. Open the original sources. Verify identifiers, publication/version dates when material, and the sections needed for the comparison. Use accessible evidence at its actual granularity. An abstract can establish its stated scope and reported conclusions. Method-level overlap, priority and numerical superiority require enough primary-source detail for those specific judgments. Include relevant anchors and link each comparator to its verification record.
+4. Log sources/services, actual queries, search date, time window/filters if used, citation tracing, accessed evidence and important blind spots. Stop a scoped review once the closest accessible work has been assessed and further plausible leads are unlikely to change the bounded finding. If access or time limits leave a decisive lead unexamined, name that uncertainty. Treat a bounded peer review as a scoped search. Reserve systematic coverage language for a documented systematic procedure.
 
-“No close prior work found within these searches” is narrower than “first ever.” Avoid comprehensive novelty claims unless the reproducible scope justifies them. To criticize an omission, identify the verified work, scientific relevance and how it changes interpretation; publication date alone does not make a reference necessary. Suggest citation only for a specific justified purpose, never to inflate citations or privilege the reviewer.
+## Compare on the dimensions that matter
 
-Separate existence of overlap from duplicate publication or plagiarism. Similar methods, concepts or benchmark data may be legitimate. Document concrete overlaps and relevant context for human assessment. Unknown journal contribution criteria block a fit judgment, not all scientific evaluation. Do not automatically reject an incremental paper because a quartile label was supplied.
+Use a contribution matrix in a full review. Include a row per material claim/comparator pair, or a row explaining the status when a central claim has no defensible comparator. Include the closest verified source and its anchor, overlap, the specific difference supported by evidence, comparison limits and what the difference changes for the intended audience or inference. Link a manuscript anchor and claim ID to each conclusion.
+
+- For empirical or computational work, align task, population/data, split, outcome or metric, time horizon, and tuning/compute conditions as relevant. Compare reported numbers only under sufficiently comparable conditions, with denominators and uncertainty where relevant. If incompatible, describe the qualitative difference and state what matched evidence would resolve it.
+- For theory, compare assumptions, objects, result strength and proof dependencies. Check whether the claimed theorem follows by a direct specialization or established argument and make the derivation inspectable if drawing that conclusion.
+- For replications, transfer studies and negative results, evaluate whether the changed conditions or increased precision resolve a meaningful uncertainty. For synthesis and interpretive work, compare the question, selection, coverage and analytical or conceptual advance over the closest treatment.
+
+## State the strongest defensible contribution
+
+For each central claim, report three separate judgments.
+
+- **Distinctiveness** — describe the demonstrated advance, meaningful extension/replication, or substantial overlap in the specific respect established by the comparison. Use “undetermined” when the evidence cannot adjudicate it. “No close precedent found within the stated scope” is a search result. Keep any priority conclusion bounded to the verified record.
+- **Importance** — explain what changes for knowledge, practice or the target audience if the claim holds. A modest novelty claim can support a valuable contribution. Base venue fit on a current official scope and the specified article type where it can be verified.
+- **Support** — classify the manuscript's evidence as supported, partial, unsupported or not assessable in the claimed scope. Report counterevidence, unresolved comparability, and any narrower claim the evidence warrants. Convert only consequential issues into comments and specify what would resolve them.
+
+Show the **comparison basis** in each matrix row. Use “Literature-compared within stated scope” when original external work was independently checked and compared, “Supplied-material comparison only” when only supplied sources were used, or “Not currently verifiable” when access, coverage or ambiguous scope prevents a defensible comparison. A supplied reference list alone gives positioning context. State exactly which comparisons were possible.
+
+Conclude with a short contribution statement in reviewer language covering what the paper adds, relative to which works, under which conditions, and why it matters. If a citation omission is consequential, explain how the specific verified work changes the claim. Similarity can indicate shared methods or a narrower contribution. Handle integrity questions through the publication-ethics protocol.
 
 ---
 
@@ -138,5 +155,6 @@ Prepared 2026-10-20. These are sources actually retrieved or attempted during pa
 | [CONSORT/SPIRIT — Published statements](https://www.consort-spirit.org/published-statements) | Presence of 2025 trial and protocol reporting statements | Opened 2026-10-20. Individual statement checklists were not reproduced or audited. |
 | [OpenAI — GPT Actions introduction](https://developers.openai.com/api/docs/actions/introduction) | Custom GPT architecture supports instructions, knowledge and optional service integration | Opened 2026-10-20. No account-specific feature availability or numeric upload limits assumed. |
 | [OpenAI — Moving custom GPT workflows to plugins](https://learn.chatgpt.com/docs/migrate-custom-gpts) | Distinction between custom GPT instructions/knowledge and skill-based workflows | Opened 2026-10-20. Platform UI and availability may change; deployment requires a real environment check. |
+| [Rethlefsen et al. — PRISMA-S](https://doi.org/10.1186/s13643-020-01542-z) | Search-source and platform identification, coverage limits, and reporting the date of each search | Publisher full text inspected 2026-11-17, items 1 and 13. These principles inform the scoped search log. Apply the full PRISMA-S guideline only when warranted by the research design. |
 
 Maintain a separate source log for every manuscript review. This file is not evidence that its references or novelty were verified. No endorsements, certification or affiliation with these organizations is implied.

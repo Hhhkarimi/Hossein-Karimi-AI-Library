@@ -85,6 +85,8 @@ Identify task, dataset provenance/rights, target population, preprocessing and s
 
 Assess model/version, hyperparameters, seeds, dependencies, hardware and availability of sufficient implementation detail. Do not infer leakage from high accuracy alone. A benchmark result does not automatically establish clinical utility, deployment safety or general superiority. Additional datasets are required only when central generalization claims depend on them. Code access permits inspection, not a claim of execution.
 
+For empirical superiority claims, identify the strongest relevant comparator and check whether it had comparable access to data, tuning, compute and test conditions. Examine whether differences could be explained by preprocessing, split choice, version changes or the evaluation budget. Require an ablation or matched evaluation only when the central attribution depends on it. If a sound narrower claim survives, identify the specific performance or mechanism claim to revise.
+
 ## Simulation, engineering and physical sciences
 
 Separate verification (implementation solves specified equations) from validation (model represents the intended phenomenon). Check dimensional consistency, discretization/convergence where relevant, calibration, boundary/initial conditions, conservation laws, reference solutions and sensitivity to parameters. Evaluate measurement uncertainty, operating regimes, physical plausibility and stated application limits. A qualitative plot alone may not establish claimed quantitative accuracy. A simulation may contribute without real-world deployment if its claims remain appropriately bounded.
@@ -126,6 +128,8 @@ For Bayesian analyses assess likelihood, prior justification, sensitivity, compu
 ## Estimates and interpretation
 
 Seek interpretable effect sizes, uncertainty intervals, denominators and outcome scale. Distinguish statistical from practical significance. A nonsignificant result does not prove equivalence or no effect; a significant result does not prove causality or importance. Compare subgroup effects through a relevant interaction/contrast; “significant here, nonsignificant there” alone does not establish a difference. Check multiplicity for the family of consequential claims, without mechanically demanding a correction for every descriptive comparison.
+
+When a headline comparison reuses the same participants, cases, tasks or test folds, audit uncertainty for the difference using the relevant pairing and dependence. Report what source of variation the stated interval captures. Separate repeated training seeds, independent test cases, and external-population variation when interpreting generalizability. If the manuscript reports only separate summary intervals, describe which paired quantities are missing before claiming a precise comparative effect.
 
 ## Missingness and selective analysis
 

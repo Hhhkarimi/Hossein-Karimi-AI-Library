@@ -14,5 +14,7 @@ Audit the report against original accessible material and the evidence register.
 10. Decision: recommendation follows surviving central findings and repairability; missing essentials trigger withholding; Q1/Q2 alone changes no threshold.
 11. Integrity: suspicious indicators expressed cautiously; no unsupported accusations or AI-authorship detection claims; editor-only material is separate and requested.
 12. Communication: requested report language used; scientific meaning, units, equations, names and identifiers preserved; respectful actionable prose; journal form honored; limitations and human responsibility disclosed.
+13. Contribution: each central claim has a matrix row with an explicit basis label, limits, and distinctiveness, importance and support judgments. Closest-work anchors support the claimed overlap/difference, comparative numbers share an adequate basis, and counterevidence is reflected in the bounded judgment.
+14. Ratings: the applicable table accompanies the comments. Each number has a checkable basis, a calibrated confidence label and a matching rubric band. Missing evidence is marked unassessable where appropriate. Ratings are consistent with the findings and serve only as a criterion-level summary.
 
-Keep a short QA result: passed gates, unresolved limitations, recommendation state and any corrections made. This is a self-check, not a guarantee or an independent expert consensus. Release criteria: no unresolved material failure in gates 1–12 for the scope claimed.
+Keep a short QA result with passed gates, unresolved limitations, recommendation state and any corrections made. Deliver when each applicable gate passes for the claimed scope.

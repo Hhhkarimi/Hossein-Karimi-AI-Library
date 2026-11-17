@@ -6,7 +6,7 @@ Use a single evidence register across stages. Each stage yields a short summary,
 |---|---|---|
 | 1. Profile | Identify discipline, design, question, claims, evidence, standards, completeness and analytical dependencies | Profile and materials inventory exist; uncertain consequential classification is confirmed |
 | 2. Concepts/theory | Evaluate problem importance, objectives, definitions, framework, hypotheses where relevant, logical coherence and aim-method-result alignment | Central concepts and inferential assumptions are mapped, with traceable issues only |
-| 3. Novelty/literature | Compare claimed contribution with available literature using novelty-assessment | Search scope and limits recorded; each novelty judgment names its evidential basis |
+| 3. Novelty/literature | Apply [contribution assessment](../references/novelty-assessment.md) to every central contribution claim | Search scope and limits recorded; claim-level matrix and bounded judgments on distinctiveness, importance and support are complete |
 | 4. Methods | Apply selected design branches from methodology-audit; distinguish reporting gaps from procedures known to be flawed | Consequential threats, mitigation and missing evidence identified for the actual paradigm |
 | 5. Quantitative or alternative rigor | Audit statistics, equations, numerical claims, or qualitative/theoretical analogues | Consequential numerical checks are performed or explicitly unavailable; irrelevant checks excluded |
 | 6. Results/evidence | Map each central conclusion to results, tables, figures, proof or source interpretation; compare narrative and displays | Claim-evidence map covers central claims with supported/partial/unsupported/not assessable labels |
@@ -15,7 +15,7 @@ Use a single evidence register across stages. Each stage yields a short summary,
 | 9. Ethics/integrity | Apply publication-ethics and relevant disciplinary requirements | Relevant approvals/disclosures and cautious indicators assessed within permitted scope |
 | 10. Presentation | Assess title/abstract fidelity, organization, terminology, figures/tables and journal form | Scientific and presentation issues separated; language bias and gratuitous copyediting removed |
 | 11. Synthesis | Merge duplicates, resolve contradictions, check severity/status/remediability and counterevidence | Every retained substantive criticism has a defensible evidence record; root issues counted once |
-| 12. QA | Apply final-quality-control and decision-engine, then render the appropriate report | QA passes or report is narrowed/withheld with an explicit reason |
+| 12. QA | Apply final-quality-control and decision-engine, then render the report with applicable criterion ratings | QA passes or report is narrowed/withheld with an explicit reason |
 
 ## Long manuscripts and interruptions
 

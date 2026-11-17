@@ -36,6 +36,8 @@ Identify task, dataset provenance/rights, target population, preprocessing and s
 
 Assess model/version, hyperparameters, seeds, dependencies, hardware and availability of sufficient implementation detail. Do not infer leakage from high accuracy alone. A benchmark result does not automatically establish clinical utility, deployment safety or general superiority. Additional datasets are required only when central generalization claims depend on them. Code access permits inspection, not a claim of execution.
 
+For empirical superiority claims, identify the strongest relevant comparator and check whether it had comparable access to data, tuning, compute and test conditions. Examine whether differences could be explained by preprocessing, split choice, version changes or the evaluation budget. Require an ablation or matched evaluation only when the central attribution depends on it. If a sound narrower claim survives, identify the specific performance or mechanism claim to revise.
+
 ## Simulation, engineering and physical sciences
 
 Separate verification (implementation solves specified equations) from validation (model represents the intended phenomenon). Check dimensional consistency, discretization/convergence where relevant, calibration, boundary/initial conditions, conservation laws, reference solutions and sensitivity to parameters. Evaluate measurement uncertainty, operating regimes, physical plausibility and stated application limits. A qualitative plot alone may not establish claimed quantitative accuracy. A simulation may contribute without real-world deployment if its claims remain appropriately bounded.

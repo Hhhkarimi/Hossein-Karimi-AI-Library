@@ -24,6 +24,8 @@ Examined means actually assessed, not uploaded/indexed. Distinguish unavailable,
 | Claim ID | Exact available anchor and faithful paraphrase | Evidence anchors | Support: supported/partial/unsupported/not assessable | Limitation/alternative | Linked finding IDs |
 |---|---|---|---|---|---|
 
+For contribution claims, link the report matrix to these claim IDs and the verification records below. Keep the comparison basis, key blind spots and decisive source IDs in the checkpoint so a resumed review can verify or revise the verdict.
+
 ## Findings
 
 | ID | Severity | A/B/C/D status | Source/version + anchor | Observation and evidence | Scientific rationale + consequence | Action + remediability | Counterevidence/uncertainty | State |
@@ -128,6 +130,8 @@ Title; subject/subfield and research tradition; article type/design; target jour
 
 Balanced scientific assessment of question, contribution, methods, evidence and main limitations. Distinguish the manuscript's claims from verified facts. Do not make an adverse judgment merely to populate the report.
 
+In full reviews and revision reassessments, add the [criterion ratings](review-ratings.md) table here. Follow its scope, placement and evidence rules. Keep sections E and F in the report.
+
 ## C. Summary of the Manuscript / خلاصهٔ مقاله
 
 Briefly and faithfully describe objective, approach, principal findings and claimed contribution. Attribute findings to the manuscript where independently unverified.
@@ -150,7 +154,12 @@ Summarize consequential design/analysis findings by reference to IDs rather than
 
 ## H. Novelty and Literature Assessment / نوآوری و جایگاه در ادبیات
 
-Describe contribution and actual comparison scope. State whether literature-compared, manuscript-supported only or not verifiable. Name actual searches/sources or limitations, never claim an exhaustive review without a defensible scope.
+Summarize the strongest defensible contribution, then present the claim-level matrix below in full reviews. Adapt the fields to the discipline. Include the actual search scope, access limits and implications of unresolved evidence. Use the [contribution assessment protocol](../references/novelty-assessment.md) for basis labels and judgments.
+
+| Claim ID and manuscript anchor | Closest work and checked source anchor | Overlap and demonstrated difference | Comparison basis and limits | Contribution judgment |
+|---|---|---|---|---|
+
+Show the basis label and limits in each row. In the judgment cell, state distinctiveness, importance and evidence support with explicit labels. Link consequences and necessary corrections to the detailed comments. Use one row per material claim/comparator pair or show why comparison of a central claim remains unavailable.
 
 ## I. Research Integrity and Reporting Considerations / اخلاق، سلامت پژوهش و گزارش‌دهی
 
@@ -167,3 +176,34 @@ Identify unavailable/unread material, extraction/visual uncertainty, unverified 
 ## L. Optional Confidential Comments to the Editor / یادداشت محرمانه برای سردبیر
 
 This section is a separate output only if explicitly requested and appropriate. Remove it from the author-facing artifact. It may summarize requested editorial concerns, evidence and uncertainty; it must not imply misconduct from unsupported indicators or contradict the scientific report.
+
+---
+
+## Module: templates/review-ratings.md
+
+# Criterion ratings / جدول امتیازدهی داوری
+
+Add this table to full reviews and revision reassessments alongside all applicable narrative sections and detailed major and minor comments. In a focused or preliminary review include it when requested, then limit the ratings to assessable criteria. Follow a supplied journal's scale and field placement. When its form has no room for the table, deliver it as a companion summary for the requesting reviewer if permitted. Respect explicit instructions to omit ratings.
+
+| Criterion / معیار | Rating / امتیاز | Evidence and confidence / مبنا و اطمینان |
+|---|---|---|
+| Target-venue fit / تناسب با مجلهٔ هدف | — | Official aims/scope and article type, linked to the manuscript's topic, approach and audience. |
+| Interest and scientific importance / اهمیت و جذابیت علمی | — | Consequence of the question or established contribution for the intended field or audience. |
+| Originality and contribution / نوآوری و سهم علمی | — | Closest-work comparison, distinctive advance and bounded contribution verdict. |
+| Evidence and methodology / شواهد و روش‌شناسی | — | Design or argument fit, evidence for central claims, uncertainty and decisive validity issues. |
+| Clarity and presentation / وضوح و ارائه | — | Faithfulness of claims, readable argument and interpretable displays, based on actual sections examined. |
+| Submission readiness / آمادگی برای ارسال | — | Remaining essential changes for the stated venue or stated general submission context. |
+
+Use a whole number out of 10 for each assessable row, plus a short reason with a manuscript anchor, comparison/source or finding ID and an evidence-confidence label. Describe what distinguishes the chosen point within its band. Apply the bands to each criterion individually.
+
+| Band | Evidence-based interpretation |
+|---|---|
+| 1–2 | A demonstrated fundamental deficiency on this criterion. |
+| 3–4 | A material shortfall requiring substantial work on this criterion. |
+| 5–6 | Mixed evidence or a meaningful shortfall alongside substantive strengths. |
+| 7–8 | Clearly meets the criterion with limited, evidenced reservations. |
+| 9–10 | Exceptionally strong for the stated scope, with strong evidence and little or no material reservation on this criterion. |
+
+Use **Not assessable / قابل ارزیابی نیست** with the missing dependency when a numeric judgment lacks evidence. Common cases include journal fit without verifiable venue criteria, originality without adequate comparator evidence, and readiness without the central manuscript sections. Mark a lower-confidence rating as provisional only when enough substantive evidence still supports the band. Missing access alone carries no score penalty.
+
+Use high confidence for direct evidence with adequate coverage, moderate for bounded evidence with non-decisive limitations, and low for fragile but still assessable judgments. Link readiness to the outstanding actions. Update affected rows on revision, cite the changed evidence, and retain the detailed dispositions of prior comments. Keep scores criterion-specific and report the editorial recommendation under the decision rules. Averages, acceptance probabilities and numerical thresholds have no editorial role.

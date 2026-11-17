@@ -12,8 +12,10 @@ Material failures: unsupported major criticism, disciplinary mismatch, false loc
 
 Pass a scenario only if every applicable expected behavior is observed and no listed error occurs. Favorable assessments and zero major comments can pass. A justified limitation or withheld decision can pass. Minor presentation issues may be recorded without implying scientific failure; the evaluator must explain this distinction.
 
+In a full review, a checkable contribution matrix covers every central novelty claim. The report states separate judgments for distinctiveness, importance and evidence. Applicable ratings accompany detailed comments and use anchored reasons, confidence and unassessable labels as needed. Incomparable metrics, opaque scores and decisions driven by a score fail the affected scenario.
+
 ## Release and claims
 
-For broad behavioral acceptance execute all applicable T01–T22 cases on the actual target environment with adequate inputs and record outcomes. A package-structure pass or a subset of successful forward tests is not equivalent to this full suite. State tested versus untested cases, environment, date and limits. Two reviewers/agents are not an independent human expert panel, and a self-audit is not a correctness guarantee.
+For broad behavioral acceptance execute all applicable cases in [the case matrix](test-cases.md) on the actual target environment with adequate inputs and record outcomes. State tested and untested cases, environment, date and limits. Report packaging checks, model behavior and human scientific evaluation as separate evidence.
 
 Validate a target Custom GPT separately: Instructions actually saved; four Knowledge files uploaded and relevant sections retrievable; tool availability tested on synthetic data; confidential gate and missing-tool behavior demonstrated. Local file validation cannot prove those host behaviors.

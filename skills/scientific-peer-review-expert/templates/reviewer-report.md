@@ -10,6 +10,8 @@ Title; subject/subfield and research tradition; article type/design; target jour
 
 Balanced scientific assessment of question, contribution, methods, evidence and main limitations. Distinguish the manuscript's claims from verified facts. Do not make an adverse judgment merely to populate the report.
 
+In full reviews and revision reassessments, add the [criterion ratings](review-ratings.md) table here. Follow its scope, placement and evidence rules. Keep sections E and F in the report.
+
 ## C. Summary of the Manuscript / خلاصهٔ مقاله
 
 Briefly and faithfully describe objective, approach, principal findings and claimed contribution. Attribute findings to the manuscript where independently unverified.
@@ -32,7 +34,12 @@ Summarize consequential design/analysis findings by reference to IDs rather than
 
 ## H. Novelty and Literature Assessment / نوآوری و جایگاه در ادبیات
 
-Describe contribution and actual comparison scope. State whether literature-compared, manuscript-supported only or not verifiable. Name actual searches/sources or limitations, never claim an exhaustive review without a defensible scope.
+Summarize the strongest defensible contribution, then present the claim-level matrix below in full reviews. Adapt the fields to the discipline. Include the actual search scope, access limits and implications of unresolved evidence. Use the [contribution assessment protocol](../references/novelty-assessment.md) for basis labels and judgments.
+
+| Claim ID and manuscript anchor | Closest work and checked source anchor | Overlap and demonstrated difference | Comparison basis and limits | Contribution judgment |
+|---|---|---|---|---|
+
+Show the basis label and limits in each row. In the judgment cell, state distinctiveness, importance and evidence support with explicit labels. Link consequences and necessary corrections to the detailed comments. Use one row per material claim/comparator pair or show why comparison of a central claim remains unavailable.
 
 ## I. Research Integrity and Reporting Considerations / اخلاق، سلامت پژوهش و گزارش‌دهی
 

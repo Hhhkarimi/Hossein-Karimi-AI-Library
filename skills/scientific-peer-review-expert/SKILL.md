@@ -1,6 +1,6 @@
 ---
 name: scientific-peer-review-expert
-description: Assist a qualified human with evidence-grounded scholarly manuscript peer review, methodological and statistical audits, citation verification, and revision reassessment across disciplines. Use for scientific reviewer reports, including Persian and English; not for ordinary summaries, proofreading, or author rebuttals alone.
+description: Draft scientific manuscript peer reviews with closest-work comparison, contribution assessment, methods and statistics audits, citation verification, criterion ratings, and revision reassessment. Use for multidisciplinary reviewer reports in Persian or English. Ordinary summaries, proofreading and author rebuttals have their own workflows.
 ---
 
 # Scientific Peer Review Expert — SPRE
@@ -23,7 +23,7 @@ Load details only when relevant:
 
 - Method/design audit, including qualitative, theoretical, computational and interdisciplinary work: [methodology](references/methodology-audit.md).
 - Quantitative claims, tables, equations or reported numerical inconsistencies: [statistics](references/statistical-review.md).
-- Originality or missing-literature claims: [novelty](references/novelty-assessment.md).
+- Full review, originality claims or disputed positioning: [contribution and closest-work comparison](references/novelty-assessment.md).
 - Selecting reporting standards or extensions: [guidelines](references/reporting-guidelines.md). Record applicability and version; reporting completeness and methodological validity are distinct.
 - External source checks or numerical tool work: [verification workflow](workflows/evidence-verification.md) and [reference protocol](references/reference-verification.md).
 - Confidentiality, ethics, conflicts, suspicious patterns or disclosure: [ethics](references/publication-ethics.md).
@@ -35,11 +35,11 @@ Keep separate axes: severity = Major/Minor; evidence status = A confirmed issue/
 
 ## Synthesize and deliver
 
-Reconcile duplicates and conflicting findings, recheck major criticisms against originals, and apply [decision rules](workflows/decision-engine.md). Use [decision summary](templates/decision-summary.md) to connect surviving findings to remediability and recommendation. Avoid numerical quality scores and automatic recommendation thresholds.
+Reconcile duplicates and conflicting findings, recheck major criticisms against originals, and apply [decision rules](workflows/decision-engine.md). Use [decision summary](templates/decision-summary.md) to connect surviving findings to remediability and recommendation. In full reviews and revision reassessments add [criterion ratings](templates/review-ratings.md) alongside the detailed comments. Use evidence-linked ratings for assessable criteria and keep editorial reasoning qualitative.
 
 Complete [final quality control](workflows/final-quality-control.md) before delivery. Use [reviewer report](templates/reviewer-report.md), adapting to a supplied journal form. Report scope, verification coverage and limitations; keep author-facing and explicitly requested editor-only outputs separate. Match the requested report language, independently of manuscript language. Preserve equations, units, names and identifiers in translation.
 
-For revision reassessment, retain IDs, compare the revised passage and response against each prior finding, mark resolved/partial/unresolved/not assessable, and add new findings only for newly exposed or previously missed consequential issues. Do not demand unrelated additions merely because a revision was invited.
+For revision reassessment, retain IDs, compare the revised passage and response against each prior finding, mark resolved/partial/unresolved/not assessable, and update affected contribution judgments and ratings. Add new findings only for newly exposed or previously missed consequential issues. Keep required revisions tied to existing claims.
 
 ## Portability and maintenance
 

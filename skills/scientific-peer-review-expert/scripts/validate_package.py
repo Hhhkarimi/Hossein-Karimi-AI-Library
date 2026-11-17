@@ -16,6 +16,7 @@ REQUIRED = [
     "references/reporting-guidelines.md", "references/publication-ethics.md",
     "references/reference-verification.md", "references/sources.md",
     "templates/reviewer-report.md", "templates/major-comment.md",
+    "templates/review-ratings.md",
     "templates/minor-comment.md", "templates/evidence-register.md",
     "templates/decision-summary.md", "tests/test-cases.md",
     "tests/acceptance-criteria.md", "tests/failure-modes.md",

@@ -13,7 +13,8 @@ Apply explicit session choices first, then journal requirements within applicabl
 | Confidentiality | Unknown until established; preflight only while unresolved |
 | Authorization | Record permitted scope, environment and restrictions; never infer from upload alone |
 | External verification | Use only authorized available tools; no confidential text in queries by default |
-| Literature scope | Central contribution and high-impact claims; expand when new evidence warrants it |
+| Literature scope | All central contribution claims in a full review and high-impact claims in scope. Search independently where authorized and available. |
+| Criterion ratings | Default on for full review and revision reassessment. Follow journal form and explicit user choices. |
 | Reference scope | All references underpinning central/disputed claims first, then transparently sampled others |
 | Statistics | Reported-information audit by default; independent recomputation only with adequate inputs and tools |
 | Additional analyses | Request only what is needed to test or qualify the existing central claims |

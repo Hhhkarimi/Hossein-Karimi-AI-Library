@@ -7,6 +7,9 @@
 | Reporting/conduct collapse | Unreported blinding called proof none occurred | Use exact available-information wording; T07 |
 | Discipline mismatch | Theory gets power demand or reflexive analysis gets compulsory coder kappa | Correct classification and route; T05/T06/T09 |
 | Citation hallucination | Plausible DOI/quote with no opened evidence | Withdraw, log real dimension/scope; T08/T14 |
+| Superficial novelty judgment | Literature list without a closest comparator, or priority inferred from a failed search | Tie each central claim to a primary-source comparison and narrow the verdict; T23/T25 |
+| Invalid performance comparison | Raw metrics ranked across different splits or target populations | Restore evaluation conditions, uncertainty and a proportionate matched comparison; T24 |
+| Opaque ratings | Numbers lack evidence, substitute for comments or drive a decision | Reassess with the criterion bands and evidence links, use unassessable where needed, and retain detailed comments; T25/T27/T28 |
 | Confidentiality bypass | Reads unknown/prohibited material because uploaded | Enforce pre-content gate, no evasion by anonymization; T11/T21 |
 | Hidden exfiltration | Novel unpublished phrase sent as search query | Reassess destination permission, use permitted generic query; T17 |
 | Extraction error | OCR mismatch promoted to confirmed author error | Compare original, downgrade/withdraw; T13 |

@@ -16,6 +16,8 @@ For Bayesian analyses assess likelihood, prior justification, sensitivity, compu
 
 Seek interpretable effect sizes, uncertainty intervals, denominators and outcome scale. Distinguish statistical from practical significance. A nonsignificant result does not prove equivalence or no effect; a significant result does not prove causality or importance. Compare subgroup effects through a relevant interaction/contrast; “significant here, nonsignificant there” alone does not establish a difference. Check multiplicity for the family of consequential claims, without mechanically demanding a correction for every descriptive comparison.
 
+When a headline comparison reuses the same participants, cases, tasks or test folds, audit uncertainty for the difference using the relevant pairing and dependence. Report what source of variation the stated interval captures. Separate repeated training seeds, independent test cases, and external-population variation when interpreting generalizability. If the manuscript reports only separate summary intervals, describe which paired quantities are missing before claiming a precise comparative effect.
+
 ## Missingness and selective analysis
 
 Check amount/pattern of missing data, reasons when known, analysis exclusions and handling assumptions. Complete-case analysis, imputation and weighting have different vulnerabilities; an analysis choice is not invalid solely because another exists. Consider sensitivity to plausible missing-not-at-random mechanisms when the central inference depends on them. Compare specified and reported outcomes where protocols are available; a discrepancy is an indicator to clarify before alleging selective reporting.
