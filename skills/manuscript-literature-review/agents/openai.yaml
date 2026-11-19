@@ -1,4 +1,4 @@
 interface:
   display_name: "Manuscript Literature Review"
-  short_description: "Draft a literature review and position a paper's contribution"
-  default_prompt: "Use $manuscript-literature-review to draft the related-work section from my title and contribution."
+  short_description: "Write a comprehensive literature review with a comparison matrix"
+  default_prompt: "Use $manuscript-literature-review to write a full review from my title and contribution, covering foundational and recent studies and including a detailed comparison matrix."
