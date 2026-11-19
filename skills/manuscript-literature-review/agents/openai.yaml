@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manuscript Literature Review"
+  short_description: "Draft a literature review and position a paper's contribution"
+  default_prompt: "Use $manuscript-literature-review to draft the related-work section from my title and contribution."
