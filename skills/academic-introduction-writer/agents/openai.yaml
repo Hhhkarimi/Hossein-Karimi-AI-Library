@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Introduction Writer"
+  short_description: "Interactive introductions grounded in evidence"
+  default_prompt: "Use $academic-introduction-writer to develop my article introduction interactively."
