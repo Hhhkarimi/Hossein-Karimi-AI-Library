@@ -1,0 +1,6 @@
+interface:
+  display_name: "Academic Abstract Writer"
+  short_description: "Write faithful multilingual abstracts and keywords"
+  default_prompt: "Use $academic-abstract-writer to draft an evidence-grounded academic abstract and discoverable keywords from my manuscript."
+policy:
+  allow_implicit_invocation: true

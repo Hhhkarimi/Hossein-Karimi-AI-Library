@@ -1,0 +1,6 @@
+# Journal adaptation
+When the user supplies author instructions, extract the article type, abstract word limit, heading policy, keyword count/ordering, abbreviation/citation rules, mandatory registrations, funding or reporting requirements. If public verification is requested and tools are available, use the official journal page and note the access date internally. Do not assume all journals from a publisher use the same template.
+
+If the user says “follow journal X” this is an explicit request to use its required structure, including a structured abstract if required. If the user instead explicitly requires one paragraph and journal X mandates multiple headings, flag the discrepancy outside the abstract and prioritize the explicit paragraph requirement unless journal compliance was expressly prioritized. If no venue is specified, use the default one paragraph and moderate length. Do not ask for a venue just to proceed.
+
+For exact word limits, prefer the journal's counting policy. Otherwise use whitespace tokens for languages with space-delimited words (Persian ZWNJ remains inside the token). For Chinese, Japanese, Thai and other languages without consistent word spaces, use an appropriate segmenter if available or the journal's character-based rule. Do not claim exact word compliance from whitespace counts for such languages.

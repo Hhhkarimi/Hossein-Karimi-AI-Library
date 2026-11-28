@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Internal manuscript evidence map",
+  "type": "object",
+  "required": [
+    "language",
+    "study_type",
+    "stage",
+    "claims"
+  ],
+  "properties": {
+    "language": {
+      "type": "string"
+    },
+    "study_type": {
+      "type": "string"
+    },
+    "stage": {
+      "enum": [
+        "completed",
+        "planned",
+        "partial",
+        "unknown"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "statement",
+          "source_locator",
+          "status"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "context",
+              "objective",
+              "method",
+              "result",
+              "conclusion",
+              "limitation",
+              "registration",
+              "funding"
+            ]
+          },
+          "statement": {
+            "type": "string"
+          },
+          "source_locator": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "supported",
+              "conflicting",
+              "missing"
+            ]
+          }
+        }
+      }
+    },
+    "missing_or_conflicting": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

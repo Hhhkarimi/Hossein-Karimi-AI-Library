@@ -1,0 +1,5 @@
+Abstract
+
+Urban vegetation may moderate heat exposure, but the magnitude of this relationship varies across urban landscapes. This synthetic study examined associations between vegetation cover and land surface temperature in 120 urban grid cells using satellite observations and multivariable regression. Greater vegetation cover was associated with lower land surface temperature after adjustment for building density. The observational design does not establish causality. These findings illustrate how remotely sensed indicators can inform the assessment of urban thermal environments.
+
+Keywords: Urban heat island; Urban vegetation; Land surface temperature; Remote sensing; Urban climate

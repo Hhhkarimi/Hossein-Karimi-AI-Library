@@ -1,0 +1,140 @@
+{
+  "version": "2.0.0",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "70fbe5c3da3b162603039e7f32255e81ee52829e15656570abb477d3f87e19e4",
+      "bytes": 420
+    },
+    {
+      "path": "README.md",
+      "sha256": "4f9bb37d2000bfe7375c5d7684bb093aff90f845c048368838b4c258e3c5db82",
+      "bytes": 2761
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "7d94d91e069f6ce13a4d782897cbf01cf48aebc6e9b0cb5ed788b908e9224d20",
+      "bytes": 7247
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "003928359c4d301974cfb4980c801d5024883ed109acedfec815ec97b29693dd",
+      "bytes": 314
+    },
+    {
+      "path": "assets/evidence-map.schema.json",
+      "sha256": "05e01c24317fdba048a5ba59dd797cb9f92367bf4651b11d4536cdcf8746a026",
+      "bytes": 1387
+    },
+    {
+      "path": "assets/output-templates.md",
+      "sha256": "a7c28d68d00e22bfae4257962f11100f5736240f619e1fa9842650b61e28f145",
+      "bytes": 1106
+    },
+    {
+      "path": "assets/preferences.schema.json",
+      "sha256": "5c8c99f0ac782bdb40a9653679491da5e365fa45c53033a24f23244cec73c20c",
+      "bytes": 1026
+    },
+    {
+      "path": "assets/sample-output-en.txt",
+      "sha256": "0d512e9b985909ee1c7183e02e0b693c53f76a25ce39424fa376958525890270",
+      "bytes": 694
+    },
+    {
+      "path": "assets/sample-output-fa.txt",
+      "sha256": "e2cd5cd5a659213f5995273908c2f71b086eea4cf38a53f5be3ead48a2aa68c7",
+      "bytes": 1054
+    },
+    {
+      "path": "evals/README.md",
+      "sha256": "b8a50f616396f3e91f2b471f8cace3f86b0176a62b1c53ea60026e8370e9ad65",
+      "bytes": 577
+    },
+    {
+      "path": "evals/cases.json",
+      "sha256": "203337277b8af83ea0894c053ef675327a46badc6c59660947774d5061c8dd2e",
+      "bytes": 4820
+    },
+    {
+      "path": "evals/validation-report.json",
+      "sha256": "16739f9d68748884b3b7e199c5ba3aeef92b109e3540e9395557d21f6f914693",
+      "bytes": 485
+    },
+    {
+      "path": "references/article-type-profiles.md",
+      "sha256": "24fb9fa11d02a6714bc3a16204efdab20a10fc73272bbb5b4a6d1e56fe1d481c",
+      "bytes": 2667
+    },
+    {
+      "path": "references/composition-and-length.md",
+      "sha256": "7556eb951f21c1ab8b82b25bca7f9801d635bf97868020b3aff904175995a1eb",
+      "bytes": 3222
+    },
+    {
+      "path": "references/evidence-and-integrity.md",
+      "sha256": "9aaf84105b0b9eb9963993e3f18bd7608b2587fd77b670ab712ab3c1857aa455",
+      "bytes": 5130
+    },
+    {
+      "path": "references/examples.md",
+      "sha256": "639316e42151d6a94e954cb3ceac7975165a668c6419d1c38668dda5ad4b559c",
+      "bytes": 3824
+    },
+    {
+      "path": "references/journal-adaptation.md",
+      "sha256": "f82acc454c7ed9bdd0b652c436743e03088fa16a13ae376ea9c4a3db2f95de62",
+      "bytes": 1354
+    },
+    {
+      "path": "references/keyword-optimization.md",
+      "sha256": "cb5ea5ade139ba58d0921660713a221f63e22cee7acb88fe26ab4c8a9aa6b5ef",
+      "bytes": 3174
+    },
+    {
+      "path": "references/keyword-selection-rubric.md",
+      "sha256": "895ea994d2929414e5ccc5ae4d1f3902d2e85e315a5ef0c77799ed9399fa487b",
+      "bytes": 1775
+    },
+    {
+      "path": "references/language-and-localization.md",
+      "sha256": "e81134693e3e96a863f72142ea53780e1f3077848252c97dda2a651b6e1b105b",
+      "bytes": 1791
+    },
+    {
+      "path": "references/quality-and-output.md",
+      "sha256": "9f9f6ffcd2dd86dd4af4a9f149d676c9c18490e033c468ec284cda105fe3735a",
+      "bytes": 2606
+    },
+    {
+      "path": "references/quality-rubric.md",
+      "sha256": "296e037d20affed32a54c165532cc8c159422360e2af375bed34ddb1223f0a84",
+      "bytes": 1530
+    },
+    {
+      "path": "references/reporting-checklists.md",
+      "sha256": "2ecf311331f18413ca908904766d020574411be2e8eb297494b3058d2d04ebdf",
+      "bytes": 2547
+    },
+    {
+      "path": "references/scientific-sources.md",
+      "sha256": "6948df4a41692d3ae16fbed21f39d363fb7794caf5f223b808874c1e575eab89",
+      "bytes": 1128
+    },
+    {
+      "path": "scripts/USAGE.md",
+      "sha256": "4a9ba63f1f001c4a1917059f567b8ad256cfc680a097912f7c72a29e2fe51b73",
+      "bytes": 1421
+    },
+    {
+      "path": "scripts/validate_abstract.py",
+      "sha256": "25ffc4c3b0897664f6a0526763fb814cf1b859df2d452ff4bb74a104295d95df",
+      "bytes": 7106
+    },
+    {
+      "path": "tests/test_validator.py",
+      "sha256": "77c5a9842a9cbc1b8def5a032677e1e03a224b2bd04218455e0afc11ff124502",
+      "bytes": 3377
+    }
+  ]
+}

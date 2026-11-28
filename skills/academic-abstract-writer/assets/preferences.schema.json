@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional task preferences",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string",
+      "default": "auto"
+    },
+    "paragraphs": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "structured": {
+      "type": "boolean",
+      "default": false
+    },
+    "exact_words": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "min_words": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "max_words": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "keyword_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "journal": {
+      "type": "string"
+    },
+    "prioritize_journal": {
+      "type": "boolean",
+      "default": false
+    },
+    "verify_keyword_popularity": {
+      "type": "boolean",
+      "default": false
+    },
+    "operation": {
+      "enum": [
+        "write",
+        "revise",
+        "keywords-only"
+      ],
+      "default": "write"
+    }
+  }
+}

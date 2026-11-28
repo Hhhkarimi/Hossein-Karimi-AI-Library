@@ -1,0 +1,2 @@
+# Behavioral evaluations
+Run each synthetic case through the target host with the skill loaded. Inspect the answer against its acceptance criteria and `references/quality-rubric.md`. Record host/model/version, date, output, pass/fail and failure reasons; repeat for meaningful model variations. The short cases intentionally stress individual rules and may be insufficient for a full abstract. Expand with real authorized manuscripts for publication-level validation. These cases are not a claim of achieved model performance. The unit tests test only deterministic utilities.

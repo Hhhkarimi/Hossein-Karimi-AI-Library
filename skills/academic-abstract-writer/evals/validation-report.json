@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "checks": {
+    "skill_frontmatter": "pass",
+    "relative_resource_paths": "pass",
+    "codex_metadata": "pass",
+    "json_parse": "pass",
+    "schema_validation": "JSON Schema Draft 2020-12 checked with jsonschema",
+    "unit_tests": "20 passed",
+    "behavioral_eval_cases": 20,
+    "model_behavior_evaluation": "not run",
+    "host_installation": "not tested"
+  },
+  "notes": "Mechanical checks do not verify scientific quality or live model behavior."
+}
